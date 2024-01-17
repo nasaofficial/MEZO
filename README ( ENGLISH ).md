@@ -10,6 +10,10 @@ Function: Terminates the iCUE.exe process for examination.
 Option 4
 Function: Terminates the running processes using multiple Taskkill commands hand made.
 
+((((((((((((((((((((
+In case the screen turns black and does not open in any of the four options above, press SHIFT + CTRL + ESC, then click on "File," followed by "Run new task." Type explorer.exe and press enter.
+))))))))))))))))))))
+
 Option 5
 Function: Activates Windows 10 using a predefined activation key.
 
