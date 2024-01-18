@@ -41,13 +41,13 @@ echo              #                                                             
 echo              #    3. Taskkill iCUE.exe                     4. Multiple Taskkill commands                   #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    5. Windows Activation                    6. Microsoft Office Activation                  #
+echo              #    5. Windows 10 Activation                 6. Microsoft Office Activation                  #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    7. Powershell Tweaks                     8. Call For Help                                #
+echo              #    7. Powershell Tweaks                     8. More Options                                 #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    9. Exit                                                                                  #
+echo              #    0. Exit                                  9. Call For Help                                #
 echo              #                                                                                             #
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 echo.
@@ -59,68 +59,48 @@ echo.
 echo.
 echo.
 
-choice /n /c 123456789 /m "Choose a number (1 to 9) :"
-  
-rem Check the user's choice and perform the corresponding action
-if errorlevel 9 exit
-if errorlevel 8 goto option8
-if errorlevel 7 goto option7
-if errorlevel 6 goto option6
-if errorlevel 5 goto option5
-if errorlevel 4 goto option4
-if errorlevel 3 goto option3
-if errorlevel 2 goto option2
-if errorlevel 1 goto option1
+set /p choice=Enter your choice ( 0 - 9 ) : 
 
-rem Default action if the user doesn't choose a valid option
-echo Invalid choice. Please Choose a number (1 to 9) .
-choice /n /c 123456789 /m "Choose a number (1 to 9) :
-if errorlevel 9 exit
-if errorlevel 8 goto option8
-if errorlevel 7 goto option7
-if errorlevel 6 goto option6
-if errorlevel 5 goto option5
-if errorlevel 4 goto option4
-if errorlevel 3 goto option3
-if errorlevel 2 goto option2
-if errorlevel 1 goto option1
+if "%choice%"=="0" exit
+if "%choice%"=="1" goto option1
+if "%choice%"=="2" goto option2
+if "%choice%"=="3" goto option3
+if "%choice%"=="4" goto option4
+if "%choice%"=="5" goto option5
+if "%choice%"=="6" goto option6
+if "%choice%"=="7" goto option7
+if "%choice%"=="8" goto menu2
+if "%choice%"=="9" goto option9
 
 
 
+:MENU2
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+echo Coming Soon...
+pause
+ goto menu
 
 :Option1
 @echo off
 CD /D "%~DP0"
 cls
 color c
-SET tmpfl=process_list.txt
+SET tmpfl=Process_List.txt
 IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
 SETLOCAL ENABLEDELAYEDEXPANSION
+
 FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LIST ^| FIND /I "Image name:"') DO (
     SET var=%%~A
     SET var=!var: =!
-    ECHO !var! | FINDSTR /I /V /C:"System">>"%tmpfl%"
+
+    REM Check if the process is not a Windows process
+    ECHO !var! | FINDSTR /I /V /C:"System" | FINDSTR /I /V /C:"explorer.exe" | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" >nul
+
+    IF !ERRORLEVEL! EQU 0 (
+        ECHO Terminating: !var!
+        TASKKILL /F /FI "USERNAME eq %Username%" /IM !var!
+    )
 )
-FOR /F "USEBACKQ TOKENS=*" %%A IN ("%tmpfl%") DO (
-    TASKKILL /F /FI "USERNAME eq %Username%" /IM %%~A
-)
-DEL /F /Q "%tmpfl%"
-GOTO :EOF
 
 timeout /nobreak /t 3 >nul
 echo Done...
@@ -11069,7 +11049,7 @@ color b
 
 
 
-:Option8
+:Option9
 
 explorer "https://t.me/id9p0"
 timeout /nobreak /t 3 >nul
