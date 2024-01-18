@@ -18,10 +18,13 @@ Option 5
 Function: Activates Windows 10 using a predefined activation key.
 
 Option 6
-Function: Runs a PowerShell script to tweak some settings.
+Function: Activates Microsoft Office using a predefined activation key.
 
 Option 7
-Function: Exits the program.
+Function: Runs a PowerShell script to tweak some settings.
 
 Option 8
 Function: Opens a Telegram link to contact the developer for help.
+
+Option 9
+Closes The Program
