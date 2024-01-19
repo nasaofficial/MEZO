@@ -1,30 +1,41 @@
 Option 1
-Function: Displays a list of running processes and kills them.
+Function: Displays a list of running processes and terminates them (dangerous).
 
 Option 2
-Function: Displays a list of running processes excluding important ones and kills them.
+Function: Displays a list of running processes excluding essential ones and terminates them.
 
 Option 3
-Function: Terminates the iCUE.exe process for examination.
+Function: Activates Windows 11 by entering the activation key.
 
 Option 4
-Function: Terminates the running processes using multiple Taskkill commands hand made.
+Function: Terminates a group of processes using manually crafted Taskkill commands.
 
-((((((((((((((((((((
-In case the screen turns black and does not open in any of the four options above, press SHIFT + CTRL + ESC, then click on "File," followed by "Run new task." Type explorer.exe and press enter.
-))))))))))))))))))))
+(((((In case the screen is black and none of the above four options work, press SHIFT + CTRL + ESC, then click on "File," followed by "Run new task," and type explorer.exe, then press enter.)))))
 
 Option 5
-Function: Activates Windows 10 using a predefined activation key.
+Function: Activates Windows 10 by entering the activation key.
 
 Option 6
-Function: Activates Microsoft Office using a predefined activation key.
+Function: Activates Microsoft Office by entering the activation key.
 
 Option 7
-Function: Runs a PowerShell script to tweak some settings.
+Function: Runs a PowerShell script to optimize some settings.
 
 Option 8
-Function: Opens a Telegram link to contact the developer for help.
+Function: Opens a new menu for additional options.
 
 Option 9
-Closes The Program
+Function: Communicates with the developer.
+
+Option 0
+Function: Closes the program.
+Second Menu:
+
+Option 1
+Function: Repairs system files.
+
+Option 2
+Function: Activates protection.
+
+Option 3
+Function: Suggests applications for new or formatted devices.
