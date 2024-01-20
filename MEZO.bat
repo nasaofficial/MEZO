@@ -55,7 +55,7 @@ echo.
 echo.
 echo.
 
-choice /n /c 12345678 /m "Enter the number of your choice:"
+choice /n /c 1234567890 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
@@ -85,7 +85,7 @@ title Comination Made By Moaz Elsayed
 
 cls 
 
-color b
+color 6
 echo.
 echo.
 echo.
@@ -96,10 +96,10 @@ echo              #                                                             
 echo              #    1. Fix Corrupt System Files              2. Turn On Firewall                             #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    3. Needed Apps For New Devices           4.                                              #
+echo              #    3. Needed Apps For New Devices           4. Windows 11 download                          #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    5.                                       6.                                              #
+echo              #    5. Windows 10 download                   6. Microsoft Office Download IMG                #
 echo              #                                                                                             #
 echo              #                                                                                             #
 echo              #    7. Back                                  8. More Options                                 #
@@ -117,15 +117,15 @@ echo.
 echo.
 echo.
 
-choice /n /c 12345678 /m "Enter the number of your choice:"
+choice /n /c 1234567890 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
-if errorlevel 8 goto menu4
+if errorlevel 8 goto soon
 if errorlevel 7 goto menu
-if errorlevel 6 goto soon
-if errorlevel 5 goto soon
-if errorlevel 4 goto soon
+if errorlevel 6 goto option16
+if errorlevel 5 goto option15
+if errorlevel 4 goto option14
 if errorlevel 3 goto menu3
 if errorlevel 2 goto option12
 if errorlevel 1 goto option11
@@ -11316,10 +11316,11 @@ color b
 
 :Option7
 
+@echo off
+
 color 3
 cls
 
-@echo off
 :: Check if the script is running with administrative privileges
 NET FILE 1>NUL 2>NUL
 if %errorlevel% == 0 (
@@ -11345,7 +11346,7 @@ if %errorlevel% neq 0 (
 echo PowerShell command executed successfully.
 
 :: Open CMD to the same directory
-start cmd /k "cd /d "%~dp0" && call all.bat"
+start cmd /k "cd /d "%~dp0" && call mezo.bat"
 
 exit 
 cls
@@ -11369,7 +11370,7 @@ color b
 :HELP
 
 explorer "https://t.me/id9p0"
-timeout /nobreak /t 3 >nul
+timeout /nobreak /t 0 >nul
 echo Done...
 
 cls
@@ -12342,3 +12343,81 @@ echo.
 timeout /nobreak /t 4 >nul
 
 goto menu2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option14
+
+explorer https://www.microsoft.com/en-us/software-download/windows11
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option15
+explorer https://www.microsoft.com/en-us/software-download/windows10
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option16
+explorer https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/ar-SA/ProPlus2021Retail.img
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU2
