@@ -43,7 +43,7 @@ echo              #                                                             
 echo              #    7. Powershell Tweaks                     8. More Options                                 #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    0. Exit                                  9. Call For Help                                #
+echo              #    9. Call For Help                                                                         #
 echo              #                                                                                             #
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 echo.
@@ -55,9 +55,10 @@ echo.
 echo.
 echo.
 
-choice /n /c 1234567890 /m "Enter the number of your choice:"
+choice /n /c 123456789 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
+
 if errorlevel 9 goto HELP
 if errorlevel 8 goto menu2
 if errorlevel 7 goto option7
@@ -67,7 +68,14 @@ if errorlevel 4 goto option4
 if errorlevel 3 goto option3
 if errorlevel 2 goto option2
 if errorlevel 1 goto option1
-if errorlevel 0 exit
+
+
+
+
+
+
+
+
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -105,7 +113,7 @@ echo              #                                                             
 echo              #    7. Back                                  8. More Options                                 #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    0. Exit                                  9. Call For Help                                #
+echo              #    9. Call For Help                                                                         #
 echo              #                                                                                             #
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 echo.
@@ -117,7 +125,7 @@ echo.
 echo.
 echo.
 
-choice /n /c 1234567890 /m "Enter the number of your choice:"
+choice /n /c 123456789E /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
@@ -129,7 +137,6 @@ if errorlevel 4 goto option14
 if errorlevel 3 goto menu3
 if errorlevel 2 goto option12
 if errorlevel 1 goto option11
-if errorlevel 0 exit
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -138,7 +145,7 @@ color b
 cls 
 
 
-SET tmpfl=Process_List.txt
+SET tmpfl=AppList.txt
 IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
 
 
@@ -377,6 +384,33 @@ set /p choice=Enter your choice ( 0 - 107 ) :
 else echo Option not found! Returning to Menu 3.
     goto menu3
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+:exit
+
+exit 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :Option1
 @echo off
@@ -11391,9 +11425,15 @@ color b
 
 :Option11
 
-color70
+cls
+
+color 70
 
 SFC /SCANNOW
+echo Scanning...
+
+Dism /Online /Cleanup-Image /RestoreHealth
+echo Restoring IMG
 
 timeout /nobreak /t 3 >nul
 echo Done...
