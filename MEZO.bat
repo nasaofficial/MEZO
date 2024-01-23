@@ -148,8 +148,8 @@ if errorlevel 9 goto HELP
 if errorlevel 8 goto soon
 if errorlevel 7 goto menu
 if errorlevel 6 goto option16
-if errorlevel 5 goto option15
-if errorlevel 4 goto option14
+if errorlevel 5 goto Windows10english
+if errorlevel 4 goto Windows11english
 if errorlevel 3 goto menu3
 if errorlevel 2 goto option12
 if errorlevel 1 goto option11
@@ -12381,16 +12381,143 @@ goto MENU2
 
 
 
+:windows10english
 
-
-
-:Option15
-explorer https://www.microsoft.com/en-us/software-download/windows10
-timeout /nobreak /t 0 >nul
-echo Done...
+@echo off
+color D 
 cls
-color b
-goto MENU2
+
+echo.
+echo.
+echo.
+echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+echo.
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo                 =========================================================================================
+echo                 \                                    Windows 10 Menu                                    /
+echo                 =========================================================================================
+echo.
+echo                    1. Windows 10 22H2 x64-bit English             2.Windows 10 21H2 x86-bit English 
+echo.                       
+echo                    3. Windows 10 21H2 32-bit English              4. Windows 10 21H2 64-bit English
+echo.                      
+echo                    5. Windows 10 21H1 32-bit English              6. Windows 10 21H1 64-bit English
+echo.
+echo                    7. Windows 10 20H2 64-bit English              8. Windows 10 20H2 32-bit English
+echo.                         
+echo                                      9. Windows 10 Tiny x64 bit - WEAK DEVICES ONLY                                              
+echo.
+echo.
+echo.                       
+echo                    0. EXIT                             911. HELP                          999. BACK
+echo. 
+echo.
+echo.
+echo. 
+
+set /p choice=Enter your choice ( 1 - 9 ) :  
+
+if "%choice%"=="0" exit
+if "%choice%"=="911" goto HELP
+if "%choice%"=="999" goto menu2
+
+set "link="
+
+if "%choice%"=="1" set "link=https://archive.org/download/windows-10-22h2-x64-english/en-us_windows_10_22h2_updated_may_2023_x64_dvd_8ae93bf4.iso"
+if "%choice%"=="2" set "link=https://archive.org/download/windows-10-22h2-x86/Win10_22H2_English_x32.iso"
+if "%choice%"=="3" set "link=https://archive.org/download/windows-10-21-h-1-x-86-x64/Windows_10_21H1_X86-64.iso"
+if "%choice%"=="4" set "link=https://archive.org/download/win-10-pro/Win10Pro.iso"
+if "%choice%"=="5" set "link=https://archive.org/download/Win10-32x/Win10_20H2_v2_English_x32%281%29.iso"
+if "%choice%"=="6" set "link=https://archive.org/download/windows-10-x64-lenovo-oem-pl/Windows10PolishLenovoOEMx64.iso"
+if "%choice%"=="7" set "link=https://archive.org/download/windows-10_20H2/Win_20H2.iso"
+if "%choice%"=="8" set "link=https://archive.org/download/win-10-20-h-2-english-x-32/Win10_20H2_English_x32.iso"
+if "%choice%"=="9" set "link=https://archive.org/download/tiny-10-23-h2/tiny10%20x64%2023h2.iso"
+
+if defined link (
+    explorer "%link%"
+    timeout /nobreak /t 0 >nul
+    echo Done...
+    cls
+    color b
+    goto MENU2
+) else (
+    echo Invalid choice. Please try again.
+    timeout /nobreak /t 2 >nul
+    goto menu2
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Windows11english
+
+color d
+cls
+
+echo.
+echo.
+echo.
+echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+echo.
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo                 =========================================================================================
+echo                 \                                    Windows 11 Menu                                    /
+echo                 =========================================================================================
+echo.
+echo                    1. Windows 11 23H2 64bit English              2. Windows 11 22H2 64bit English
+echo.                      
+echo                                           3. Windows 11 21H2 64bit English 
+echo.
+echo.
+echo.                       
+echo                    0. EXIT                            911. HELP                         999. BACK
+echo. 
+echo.
+echo.
+echo.             
+echo.  
+
+
+
+
+set /p choice=Enter your choice ( 1 - 3 ) :  
+
+if "%choice%"=="0" exit
+if "%choice%"=="911" goto HELP
+if "%choice%"=="999" goto menu2
+
+set "link="
+
+if "%choice%"=="1" set "link=https://drive.google.com/file/d/1cOFEMD3Lg1XzZq_bk65pNVMHqBpsBc6W/view"
+if "%choice%"=="2" set "link=https://www.itechtics.com/?dl_id=168"
+if "%choice%"=="3" set "link=https://www.itechtics.com/?dl_id=145"
+
+if defined link (
+    start "" "%link%"
+    timeout /nobreak /t 0 >nul
+    echo Done...
+    cls
+    color b
+    goto MENU2
+) else (
+    echo Invalid choice. Please try again.
+    timeout /nobreak /t 2 >nul
+    goto menu2
+)
 
 
 
