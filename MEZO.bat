@@ -21,14 +21,28 @@ color b
 :MENU
 title Comination Made By Moaz Elsayed
 
-cls 
+chcp 65001 >nul
 
+:: Clear the console
+
+cls
+
+color a
+
+:: Display custom messages with color using ANSI escape codes
+echo.
+echo            
+echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
+echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
+echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
+echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
+echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
+echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
+echo.
+echo.
+echo.
+echo.
 color b
-echo.
-echo.
-echo.
-echo              00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-echo.
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 echo              #                                                                                             # 
 echo              #    1. Tasklist and Taskkill                 2. Tasklist with Exclusions and Taskkill        #
@@ -47,13 +61,10 @@ echo              #    9. Call For Help                                         
 echo              #                                                                                             #
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 echo.
-echo              00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 echo.
 echo.
 echo.
-echo.
-echo.
-echo.
+
 
 choice /n /c 123456789 /m "Enter the number of your choice:"
 
@@ -94,11 +105,20 @@ title Comination Made By Moaz Elsayed
 cls 
 
 color 6
+:: Display custom messages with color using ANSI escape codes
+echo.
+echo            
+echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
+echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
+echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
+echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
+echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
+echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
 echo.
 echo.
 echo.
-echo              00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 echo.
+color e
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 echo              #                                                                                             # 
 echo              #    1. Fix Corrupt System Files              2. Turn On Firewall                             #
@@ -117,13 +137,9 @@ echo              #    9. Call For Help                                         
 echo              #                                                                                             #
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 echo.
-echo              00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 echo.
 echo.
-echo.
-echo.
-echo.
-echo.
+
 
 choice /n /c 123456789E /m "Enter the number of your choice:"
 
@@ -141,129 +157,61 @@ if errorlevel 1 goto option11
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :MENU3
-color b
+color a
 cls 
 
 
-SET tmpfl=AppList.txt
-IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
+@echo off
 
-
-
-echo ===============================
-echo      App Installer Menu
-echo ===============================
-echo 0. Exit
-echo 1. .NET 4.8
-echo 2. .NET 5
-echo 3. .NET 6
-echo 4. .NET 7
-echo 5. .NET 8
-echo 6. .NET x5
-echo 7. .NET x6
-echo 8. .NET x7
-echo 9. .NET x8
-echo 10. 7-Zip
-echo 11. AdoptJava 8
-echo 12. AdoptJavax 11
-echo 13. AdoptJavax 17
-echo 14. AdoptJavax 21
-echo 15. AdoptJavax 8
-echo 16. AdoptJDK 8
-echo 17. AdoptJDK x11
-echo 18. AdoptJDK x17
-echo 19. AdoptJDK x21
-echo 20. AdoptJDK x8
-echo 21. AIMP
-echo 22. Audacity
-echo 23. Avast
-echo 24. AVG
-echo 25. Avira
-echo 26. Blender
-echo 27. CCCP
-echo 28. CCleaner
-echo 29. CDBurnerXP
-echo 30. Chrome
-echo 31. CorrettoJDK 8
-echo 32. CorrettoJDK x11
-echo 33. CorrettoJDK x17
-echo 34. CorrettoJDK x21
-echo 35. CorrettoJDK x8
-echo 36. CutePDF
-echo 37. Discord
-echo 38. Dropbox
-echo 39. Eclipse
-echo 40. Edge
-echo 41. Essentials
-echo 42. Evernote
-echo 43. Everything
-echo 44. FastStone
-echo 45. FileZilla
-echo 46. Firefox
-echo 47. Foobar
-echo 48. Foxit
-echo 49. GIMP
-echo 50. Glary
-echo 51. GOM
-echo 52. Google Drive for Desktop
-echo 53. Google Earth
-echo 54. Greenshot
-echo 55. HandBrake
-echo 56. ImgBurn
-echo 57. InfraRecorder
-echo 58. Inkscape
-echo 59. IrfanView
-echo 60. iTunes
-echo 61. KeePass2
-echo 62. KLite Codecs
-echo 63. Krita
-echo 64. Launchy
-echo 65. LibreOffice
-echo 66. Malwarebytes
-echo 67. MediaMonkey
-echo 68. MusicBee
-echo 69. Notepad++
-echo 70. NVDA
-echo 71. OneDrive
-echo 72. OpenOffice
-echo 73. OpenShell
-echo 74. Opera Chromium
-echo 75. Paint.NET
-echo 76. PeaZip
-echo 77. Pidgin
-echo 78. PuTTY
-echo 79. Python
-echo 80. Python 3
-echo 81. Python x3
-echo 82. qBittorrent
-echo 83. RealVNC Server
-echo 84. RealVNC Viewer
-echo 85. Revo
-echo 86. ShareX
-echo 87. Skype
-echo 88. Spotify
-echo 89. Spybot 2
-echo 90. Steam
-echo 91. SugarSync
-echo 92. SumatraPDF
-echo 93. SUPER
-echo 94. TeamViewer 15
-echo 95. TeraCopy
-echo 96. Thunderbird
-echo 97. Trillian
-echo 98. VLC
-echo 99. VSCode
-echo 100. Winamp
-echo 101. WinDirStat
-echo 102. WinMerge
-echo 103. WinRAR
-echo 104. WinSCP
-echo 105. WizTree
-echo 106. XnView
-echo 107. Zoom
-echo 911. Help
-echo 999. BACK
 echo.
+echo.
+echo.
+echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+echo.
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo                 =========================================================================================
+echo                 \                                 App Installer Menu                                    /
+echo                 =========================================================================================
+echo.
+echo                  0. .Exit                        1. .NET 4.8                        2. .NET 5
+echo                  3. .NET 6                       4. .NET 7                          5. .NET 8
+echo                  6. .NET x5                      7. .NET x6                         8. .NET x7
+echo                  9. .NET x8                      10. 7-Zip                          11. AdoptJava 8
+echo                  12. AdoptJavax 11               13. AdoptJavax 17                  14. AdoptJavax 21
+echo                  15. AdoptJavax 8                16. AdoptJDK 8                     17. AdoptJDK x11
+echo                  18. AdoptJDK x17                19. AdoptJDK x21                   20. AdoptJDK x8
+echo                  21. AIMP                        22. Audacity                       23. Avast
+echo                  24. AVG                         25. Avira                          26. Blender
+echo                  27. CCCP                        28. CCleaner                       29. CDBurnerXP
+echo                  30. Chrome                      31. CorrettoJDK 8                  32. CorrettoJDK x11
+echo                  33. CorrettoJDK x17             34. CorrettoJDK x21                35. CorrettoJDK x8
+echo                  36. CutePDF                     37. Discord                        38. Dropbox
+echo                  39. Eclipse                     40. Edge                           41. Essentials
+echo                  42. Evernote                    43. Everything                     44. FastStone
+echo                  45. FileZilla                   46. Firefox                        47. Foobar
+echo                  48. Foxit                       49. GIMP                           50. Glary
+echo                  51. GOM                         52. Google Drive for Desktop       53. Google Earth
+echo                  54. Greenshot                   55. HandBrake                      56. ImgBurn
+echo                  57. InfraRecorder               58. Inkscape                       59. IrfanView
+echo                  60. iTunes                      61. KeePass2                       62. KLite Codecs
+echo                  63. Krita                       64. Launchy                        65. LibreOffice
+echo                  66. Malwarebytes                67. MediaMonkey                    68. MusicBee
+echo                  69. Notepad++                   70. NVDA                           71. OneDrive
+echo                  72. OpenOffice                  73. OpenShell                      74. Opera Chromium
+echo                  75. Paint.NET                   76. PeaZip                         77. Pidgin
+echo                  78. PuTTY                       79. Python                         80. Python 3
+echo                  81. Python x3                   82. qBittorrent                    83. RealVNC Server
+echo                  84. RealVNC Viewer              85. Revo                           86. ShareX
+echo                  87. Skype                       88. Spotify                        89. Spybot 2
+echo                  90. Steam                       91. SugarSync                      92. SumatraPDF
+echo                  93. SUPER                       94. TeamViewer 15                  95. TeraCopy
+echo                  96. Thunderbird                 97. Trillian                       98. VLC
+echo                  99. VSCode                      100. Winamp                       101. WinDirStat
+echo                  102. WinMerge                   103. WinRAR                       104. WinSCP
+echo                  105. WizTree                    106. XnView                       107. Zoom
+echo                  911. Help                       999. BACK
+echo.
+
 
 
 
@@ -426,7 +374,7 @@ FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LI
     SET var=!var: =!
 
     REM Check if the process is not a Windows process
-    ECHO !var! | FINDSTR /I /V /C:"System" | FINDSTR /I /V /C:"explorer.exe" | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" >nul
+    ECHO !var! | FINDSTR /I /V /C:"System" | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" >nul
 
     IF !ERRORLEVEL! EQU 0 (
         ECHO Terminating: !var!
@@ -434,6 +382,10 @@ FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LI
     )
 )
 
+
+taskkill /f /im "sihost.exe"
+
+taskkill /f /im "cmd.exe"
 timeout /nobreak /t 3 >nul
 echo Done...
 cls
@@ -12360,7 +12312,7 @@ goto MENU3
 
 
 :soon
-
+color a
 cls
 echo.
 echo.
