@@ -608,6 +608,1258 @@ color b
 
 
 
+:Option7
+
+@echo off
+
+color 3
+cls
+
+:: Check if the script is running with administrative privileges
+NET FILE 1>NUL 2>NUL
+if %errorlevel% == 0 (
+    goto :runPowerShell
+) else (
+    echo Please run this script as an administrator.
+    pause
+cls
+    goto menu
+)
+
+:runPowerShell
+:: Run the PowerShell command
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& {iwr -useb https://christitus.com/win | iex}"
+
+:: Check the exit code of PowerShell
+if %errorlevel% neq 0 (
+    echo An error occurred while running PowerShell command.
+    pause
+    goto MENU
+)
+
+echo PowerShell command executed successfully.
+
+:: Open CMD to the same directory
+start cmd /k "cd /d "%~dp0" && call mezo.bat"
+
+exit 
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:HELP
+
+explorer "https://t.me/id9p0"
+timeout /nobreak /t 0 >nul
+echo Done...
+
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option11
+
+cls
+
+color 70
+
+SFC /SCANNOW
+echo Scanning...
+
+Dism /Online /Cleanup-Image /RestoreHealth
+echo Restoring IMG
+
+timeout /nobreak /t 3 >nul
+echo Done...
+
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option12
+
+NetSh Advfirewall set allprofiles state off
+echo Done...
+pause
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option111
+explorer https://ninite.com/.net4.8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option112
+explorer https://ninite.com/.net5/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option113
+explorer https://ninite.com/.net6/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option114
+explorer https://ninite.com/.net7/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option115
+explorer https://ninite.com/.net8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option116
+explorer https://ninite.com/.netx5/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option117
+explorer https://ninite.com/.netx6/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option118
+explorer https://ninite.com/.netx7/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option119
+explorer https://ninite.com/.netx8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1110
+explorer https://ninite.com/7zip/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1111
+explorer https://ninite.com/adoptjava8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1112
+explorer https://ninite.com/adoptjavax11/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1113
+explorer https://ninite.com/adoptjavax17/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1114
+explorer https://ninite.com/adoptjavax21/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1115
+explorer https://ninite.com/adoptjavax8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1116
+explorer https://ninite.com/adoptjdk8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1117
+explorer https://ninite.com/adoptjdkx11/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1118
+explorer https://ninite.com/adoptjdkx17/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1119
+explorer https://ninite.com/adoptjdkx21/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1120
+explorer https://ninite.com/adoptjdkx8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1121
+explorer https://ninite.com/aimp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1122
+explorer https://ninite.com/audacity/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1123
+explorer https://ninite.com/avast/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1124
+explorer https://ninite.com/avg/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1125
+explorer https://ninite.com/avira/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1126
+explorer https://ninite.com/blender/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1127
+explorer https://ninite.com/cccp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1128
+explorer https://ninite.com/ccleaner/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1129
+explorer https://ninite.com/cdburnerxp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1130
+explorer https://ninite.com/chrome/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1131
+explorer https://ninite.com/correttojdk8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1132
+explorer https://ninite.com/correttojdkx11/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1133
+explorer https://ninite.com/correttojdkx17/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1134
+explorer https://ninite.com/correttojdkx21/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1135
+explorer https://ninite.com/correttojdkx8/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1136
+explorer https://ninite.com/cutepdf/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1137
+explorer https://ninite.com/discord/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1138
+explorer https://ninite.com/dropbox/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1139
+explorer https://ninite.com/eclipse/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1140
+explorer https://ninite.com/edge/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1141
+explorer https://ninite.com/essentials/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1142
+explorer https://ninite.com/evernote/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1143
+explorer https://ninite.com/everything/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1144
+explorer https://ninite.com/faststone/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1145
+explorer https://ninite.com/filezilla/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1146
+explorer https://ninite.com/firefox/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1147
+explorer https://ninite.com/foobar/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1148
+explorer https://ninite.com/foxit/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1149
+explorer https://ninite.com/gimp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1150
+explorer https://ninite.com/glary/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1151
+explorer https://ninite.com/gom/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1152
+explorer https://ninite.com/googledrivefordesktop/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1153
+explorer https://ninite.com/googleearth/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1154
+explorer https://ninite.com/greenshot/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1155
+explorer https://ninite.com/handbrake/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1156
+explorer https://ninite.com/imgburn/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1157
+explorer https://ninite.com/infrarecorder/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1158
+explorer https://ninite.com/inkscape/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1159
+explorer https://ninite.com/irfanview/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1160
+explorer https://ninite.com/itunes/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1161
+explorer https://ninite.com/keepass2/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1162
+explorer https://ninite.com/klitecodecs/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1163
+explorer https://ninite.com/krita/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1164
+explorer https://ninite.com/launchy/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1165
+explorer https://ninite.com/libreoffice/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1166
+explorer https://ninite.com/malwarebytes/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1167
+explorer https://ninite.com/mediamonkey/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1168
+explorer https://ninite.com/musicbee/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1169
+explorer https://ninite.com/notepadplusplus/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1170
+explorer https://ninite.com/nvda/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1171
+explorer https://ninite.com/onedrive/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1172
+explorer https://ninite.com/openoffice/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1173
+explorer https://ninite.com/openshell/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1174
+explorer https://ninite.com/operaChromium/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1175
+explorer https://ninite.com/paint.net/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1176
+explorer https://ninite.com/peazip/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1177
+explorer https://ninite.com/pidgin/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1178
+explorer https://ninite.com/putty/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1179
+explorer https://ninite.com/python/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1180
+explorer https://ninite.com/python3/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1181
+explorer https://ninite.com/pythonx3/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1182
+explorer https://ninite.com/qbittorrent/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1183
+explorer https://ninite.com/realvncserver/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1184
+explorer https://ninite.com/realvncviewer/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1185
+explorer https://ninite.com/revo/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1186
+explorer https://ninite.com/sharex/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1187
+explorer https://ninite.com/skype/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1188
+explorer https://ninite.com/spotify/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1189
+explorer https://ninite.com/spybot2/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1190
+explorer https://ninite.com/steam/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1191
+explorer https://ninite.com/sugarsync/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1192
+explorer https://ninite.com/sumatrapdf/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1193
+explorer https://ninite.com/super/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1194
+explorer https://ninite.com/teamviewer15/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1195
+explorer https://ninite.com/teracopy/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1196
+explorer https://ninite.com/thunderbird/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1197
+explorer https://ninite.com/trillian/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1198
+explorer https://ninite.com/vlc/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option1199
+explorer https://ninite.com/vscode/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11100
+explorer https://ninite.com/winamp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11101
+explorer https://ninite.com/windirstat/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11102
+explorer https://ninite.com/winmerge/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11103
+explorer https://ninite.com/winrar/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11104
+explorer https://ninite.com/winscp/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11105
+explorer https://ninite.com/wiztree/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11106
+explorer https://ninite.com/xnview/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+:Option11107
+explorer https://ninite.com/zoom/ninite.exe
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:soon
+color a
+cls
+echo.
+echo.
+echo.
+echo.
+echo.         
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
+echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
+echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
+echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
+echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+timeout /nobreak /t 4 >nul
+
+goto menu2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option14
+
+explorer https://www.microsoft.com/en-us/software-download/windows11
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:windows10english
+
+@echo off
+color D 
+cls
+
+echo.
+echo.
+echo.
+echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+echo.
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo                 =========================================================================================
+echo                 \                                    Windows 10 Menu                                    /
+echo                 =========================================================================================
+echo.
+echo                    1. Windows 10 22H2 x64-bit English             2.Windows 10 21H2 x86-bit English 
+echo.                       
+echo                    3. Windows 10 21H2 32-bit English              4. Windows 10 21H2 64-bit English
+echo.                      
+echo                    5. Windows 10 21H1 32-bit English              6. Windows 10 21H1 64-bit English
+echo.
+echo                    7. Windows 10 20H2 64-bit English              8. Windows 10 20H2 32-bit English
+echo.                         
+echo                                      9. Windows 10 Tiny x64 bit - WEAK DEVICES ONLY                                              
+echo.
+echo.
+echo.                       
+echo                    0. EXIT                             911. HELP                          999. BACK
+echo. 
+echo.
+echo.
+echo. 
+
+set /p choice=Enter your choice ( 1 - 9 ) :  
+
+if "%choice%"=="0" exit
+if "%choice%"=="911" goto HELP
+if "%choice%"=="999" goto menu2
+
+set "link="
+
+if "%choice%"=="1" set "link=https://archive.org/download/windows-10-22h2-x64-english/en-us_windows_10_22h2_updated_may_2023_x64_dvd_8ae93bf4.iso"
+if "%choice%"=="2" set "link=https://archive.org/download/windows-10-22h2-x86/Win10_22H2_English_x32.iso"
+if "%choice%"=="3" set "link=https://archive.org/download/windows-10-21-h-1-x-86-x64/Windows_10_21H1_X86-64.iso"
+if "%choice%"=="4" set "link=https://archive.org/download/win-10-pro/Win10Pro.iso"
+if "%choice%"=="5" set "link=https://archive.org/download/Win10-32x/Win10_20H2_v2_English_x32%281%29.iso"
+if "%choice%"=="6" set "link=https://archive.org/download/windows-10-x64-lenovo-oem-pl/Windows10PolishLenovoOEMx64.iso"
+if "%choice%"=="7" set "link=https://archive.org/download/windows-10_20H2/Win_20H2.iso"
+if "%choice%"=="8" set "link=https://archive.org/download/win-10-20-h-2-english-x-32/Win10_20H2_English_x32.iso"
+if "%choice%"=="9" set "link=https://archive.org/download/tiny-10-23-h2/tiny10%20x64%2023h2.iso"
+
+if defined link (
+    explorer "%link%"
+    timeout /nobreak /t 0 >nul
+    echo Done...
+    cls
+    color b
+    goto MENU2
+) else (
+    echo Invalid choice. Please try again.
+    timeout /nobreak /t 2 >nul
+    goto menu2
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Windows11english
+
+color d
+cls
+
+echo.
+echo.
+echo.
+echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+echo.
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo                 =========================================================================================
+echo                 \                                    Windows 11 Menu                                    /
+echo                 =========================================================================================
+echo.
+echo                    1. Windows 11 23H2 64bit English              2. Windows 11 22H2 64bit English
+echo.                      
+echo                                           3. Windows 11 21H2 64bit English 
+echo.
+echo.
+echo.                       
+echo                    0. EXIT                            911. HELP                         999. BACK
+echo. 
+echo.
+echo.
+echo.             
+echo.  
+
+
+
+
+set /p choice=Enter your choice ( 1 - 3 ) :  
+
+if "%choice%"=="0" exit
+if "%choice%"=="911" goto HELP
+if "%choice%"=="999" goto menu2
+
+set "link="
+
+if "%choice%"=="1" set "link=https://drive.google.com/file/d/1cOFEMD3Lg1XzZq_bk65pNVMHqBpsBc6W/view"
+if "%choice%"=="2" set "link=https://www.itechtics.com/?dl_id=168"
+if "%choice%"=="3" set "link=https://www.itechtics.com/?dl_id=145"
+
+if defined link (
+    start "" "%link%"
+    timeout /nobreak /t 0 >nul
+    echo Done...
+    cls
+    color b
+    goto MENU2
+) else (
+    echo Invalid choice. Please try again.
+    timeout /nobreak /t 2 >nul
+    goto menu2
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:Option16
+explorer https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/ar-SA/ProPlus2021Retail.img
+timeout /nobreak /t 0 >nul
+echo Done...
+cls
+color b
+goto MENU2
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11285,1258 +12537,3 @@ exit /b
 ::========================================================================================================================================
 :: Leave empty line below
 
-
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-:Option7
-
-@echo off
-
-color 3
-cls
-
-:: Check if the script is running with administrative privileges
-NET FILE 1>NUL 2>NUL
-if %errorlevel% == 0 (
-    goto :runPowerShell
-) else (
-    echo Please run this script as an administrator.
-    pause
-cls
-    goto menu
-)
-
-:runPowerShell
-:: Run the PowerShell command
-PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& {iwr -useb https://christitus.com/win | iex}"
-
-:: Check the exit code of PowerShell
-if %errorlevel% neq 0 (
-    echo An error occurred while running PowerShell command.
-    pause
-    goto MENU
-)
-
-echo PowerShell command executed successfully.
-
-:: Open CMD to the same directory
-start cmd /k "cd /d "%~dp0" && call mezo.bat"
-
-exit 
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:HELP
-
-explorer "https://t.me/id9p0"
-timeout /nobreak /t 0 >nul
-echo Done...
-
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option11
-
-cls
-
-color 70
-
-SFC /SCANNOW
-echo Scanning...
-
-Dism /Online /Cleanup-Image /RestoreHealth
-echo Restoring IMG
-
-timeout /nobreak /t 3 >nul
-echo Done...
-
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option12
-
-NetSh Advfirewall set allprofiles state off
-echo Done...
-pause
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option111
-explorer https://ninite.com/.net4.8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option112
-explorer https://ninite.com/.net5/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option113
-explorer https://ninite.com/.net6/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option114
-explorer https://ninite.com/.net7/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option115
-explorer https://ninite.com/.net8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option116
-explorer https://ninite.com/.netx5/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option117
-explorer https://ninite.com/.netx6/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option118
-explorer https://ninite.com/.netx7/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option119
-explorer https://ninite.com/.netx8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1110
-explorer https://ninite.com/7zip/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1111
-explorer https://ninite.com/adoptjava8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1112
-explorer https://ninite.com/adoptjavax11/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1113
-explorer https://ninite.com/adoptjavax17/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1114
-explorer https://ninite.com/adoptjavax21/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1115
-explorer https://ninite.com/adoptjavax8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1116
-explorer https://ninite.com/adoptjdk8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1117
-explorer https://ninite.com/adoptjdkx11/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1118
-explorer https://ninite.com/adoptjdkx17/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1119
-explorer https://ninite.com/adoptjdkx21/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1120
-explorer https://ninite.com/adoptjdkx8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1121
-explorer https://ninite.com/aimp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1122
-explorer https://ninite.com/audacity/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1123
-explorer https://ninite.com/avast/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1124
-explorer https://ninite.com/avg/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1125
-explorer https://ninite.com/avira/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1126
-explorer https://ninite.com/blender/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1127
-explorer https://ninite.com/cccp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1128
-explorer https://ninite.com/ccleaner/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1129
-explorer https://ninite.com/cdburnerxp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1130
-explorer https://ninite.com/chrome/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1131
-explorer https://ninite.com/correttojdk8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1132
-explorer https://ninite.com/correttojdkx11/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1133
-explorer https://ninite.com/correttojdkx17/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1134
-explorer https://ninite.com/correttojdkx21/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1135
-explorer https://ninite.com/correttojdkx8/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1136
-explorer https://ninite.com/cutepdf/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1137
-explorer https://ninite.com/discord/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1138
-explorer https://ninite.com/dropbox/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1139
-explorer https://ninite.com/eclipse/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1140
-explorer https://ninite.com/edge/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1141
-explorer https://ninite.com/essentials/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1142
-explorer https://ninite.com/evernote/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1143
-explorer https://ninite.com/everything/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1144
-explorer https://ninite.com/faststone/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1145
-explorer https://ninite.com/filezilla/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1146
-explorer https://ninite.com/firefox/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1147
-explorer https://ninite.com/foobar/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1148
-explorer https://ninite.com/foxit/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1149
-explorer https://ninite.com/gimp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1150
-explorer https://ninite.com/glary/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1151
-explorer https://ninite.com/gom/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1152
-explorer https://ninite.com/googledrivefordesktop/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1153
-explorer https://ninite.com/googleearth/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1154
-explorer https://ninite.com/greenshot/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1155
-explorer https://ninite.com/handbrake/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1156
-explorer https://ninite.com/imgburn/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1157
-explorer https://ninite.com/infrarecorder/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1158
-explorer https://ninite.com/inkscape/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1159
-explorer https://ninite.com/irfanview/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1160
-explorer https://ninite.com/itunes/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1161
-explorer https://ninite.com/keepass2/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1162
-explorer https://ninite.com/klitecodecs/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1163
-explorer https://ninite.com/krita/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1164
-explorer https://ninite.com/launchy/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1165
-explorer https://ninite.com/libreoffice/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1166
-explorer https://ninite.com/malwarebytes/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1167
-explorer https://ninite.com/mediamonkey/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1168
-explorer https://ninite.com/musicbee/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1169
-explorer https://ninite.com/notepadplusplus/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1170
-explorer https://ninite.com/nvda/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1171
-explorer https://ninite.com/onedrive/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1172
-explorer https://ninite.com/openoffice/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1173
-explorer https://ninite.com/openshell/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1174
-explorer https://ninite.com/operaChromium/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1175
-explorer https://ninite.com/paint.net/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1176
-explorer https://ninite.com/peazip/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1177
-explorer https://ninite.com/pidgin/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1178
-explorer https://ninite.com/putty/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1179
-explorer https://ninite.com/python/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1180
-explorer https://ninite.com/python3/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1181
-explorer https://ninite.com/pythonx3/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1182
-explorer https://ninite.com/qbittorrent/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1183
-explorer https://ninite.com/realvncserver/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1184
-explorer https://ninite.com/realvncviewer/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1185
-explorer https://ninite.com/revo/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1186
-explorer https://ninite.com/sharex/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1187
-explorer https://ninite.com/skype/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1188
-explorer https://ninite.com/spotify/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1189
-explorer https://ninite.com/spybot2/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1190
-explorer https://ninite.com/steam/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1191
-explorer https://ninite.com/sugarsync/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1192
-explorer https://ninite.com/sumatrapdf/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1193
-explorer https://ninite.com/super/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1194
-explorer https://ninite.com/teamviewer15/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1195
-explorer https://ninite.com/teracopy/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1196
-explorer https://ninite.com/thunderbird/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1197
-explorer https://ninite.com/trillian/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1198
-explorer https://ninite.com/vlc/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option1199
-explorer https://ninite.com/vscode/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11100
-explorer https://ninite.com/winamp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11101
-explorer https://ninite.com/windirstat/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11102
-explorer https://ninite.com/winmerge/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11103
-explorer https://ninite.com/winrar/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11104
-explorer https://ninite.com/winscp/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11105
-explorer https://ninite.com/wiztree/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11106
-explorer https://ninite.com/xnview/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-:Option11107
-explorer https://ninite.com/zoom/ninite.exe
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:soon
-color a
-cls
-echo.
-echo.
-echo.
-echo.
-echo.         
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
-echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
-echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
-echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
-echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-timeout /nobreak /t 4 >nul
-
-goto menu2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option14
-
-explorer https://www.microsoft.com/en-us/software-download/windows11
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:windows10english
-
-@echo off
-color D 
-cls
-
-echo.
-echo.
-echo.
-echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-echo.
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-echo                 =========================================================================================
-echo                 \                                    Windows 10 Menu                                    /
-echo                 =========================================================================================
-echo.
-echo                    1. Windows 10 22H2 x64-bit English             2.Windows 10 21H2 x86-bit English 
-echo.                       
-echo                    3. Windows 10 21H2 32-bit English              4. Windows 10 21H2 64-bit English
-echo.                      
-echo                    5. Windows 10 21H1 32-bit English              6. Windows 10 21H1 64-bit English
-echo.
-echo                    7. Windows 10 20H2 64-bit English              8. Windows 10 20H2 32-bit English
-echo.                         
-echo                                      9. Windows 10 Tiny x64 bit - WEAK DEVICES ONLY                                              
-echo.
-echo.
-echo.                       
-echo                    0. EXIT                             911. HELP                          999. BACK
-echo. 
-echo.
-echo.
-echo. 
-
-set /p choice=Enter your choice ( 1 - 9 ) :  
-
-if "%choice%"=="0" exit
-if "%choice%"=="911" goto HELP
-if "%choice%"=="999" goto menu2
-
-set "link="
-
-if "%choice%"=="1" set "link=https://archive.org/download/windows-10-22h2-x64-english/en-us_windows_10_22h2_updated_may_2023_x64_dvd_8ae93bf4.iso"
-if "%choice%"=="2" set "link=https://archive.org/download/windows-10-22h2-x86/Win10_22H2_English_x32.iso"
-if "%choice%"=="3" set "link=https://archive.org/download/windows-10-21-h-1-x-86-x64/Windows_10_21H1_X86-64.iso"
-if "%choice%"=="4" set "link=https://archive.org/download/win-10-pro/Win10Pro.iso"
-if "%choice%"=="5" set "link=https://archive.org/download/Win10-32x/Win10_20H2_v2_English_x32%281%29.iso"
-if "%choice%"=="6" set "link=https://archive.org/download/windows-10-x64-lenovo-oem-pl/Windows10PolishLenovoOEMx64.iso"
-if "%choice%"=="7" set "link=https://archive.org/download/windows-10_20H2/Win_20H2.iso"
-if "%choice%"=="8" set "link=https://archive.org/download/win-10-20-h-2-english-x-32/Win10_20H2_English_x32.iso"
-if "%choice%"=="9" set "link=https://archive.org/download/tiny-10-23-h2/tiny10%20x64%2023h2.iso"
-
-if defined link (
-    explorer "%link%"
-    timeout /nobreak /t 0 >nul
-    echo Done...
-    cls
-    color b
-    goto MENU2
-) else (
-    echo Invalid choice. Please try again.
-    timeout /nobreak /t 2 >nul
-    goto menu2
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Windows11english
-
-color d
-cls
-
-echo.
-echo.
-echo.
-echo           00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-echo.
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-echo                 =========================================================================================
-echo                 \                                    Windows 11 Menu                                    /
-echo                 =========================================================================================
-echo.
-echo                    1. Windows 11 23H2 64bit English              2. Windows 11 22H2 64bit English
-echo.                      
-echo                                           3. Windows 11 21H2 64bit English 
-echo.
-echo.
-echo.                       
-echo                    0. EXIT                            911. HELP                         999. BACK
-echo. 
-echo.
-echo.
-echo.             
-echo.  
-
-
-
-
-set /p choice=Enter your choice ( 1 - 3 ) :  
-
-if "%choice%"=="0" exit
-if "%choice%"=="911" goto HELP
-if "%choice%"=="999" goto menu2
-
-set "link="
-
-if "%choice%"=="1" set "link=https://drive.google.com/file/d/1cOFEMD3Lg1XzZq_bk65pNVMHqBpsBc6W/view"
-if "%choice%"=="2" set "link=https://www.itechtics.com/?dl_id=168"
-if "%choice%"=="3" set "link=https://www.itechtics.com/?dl_id=145"
-
-if defined link (
-    start "" "%link%"
-    timeout /nobreak /t 0 >nul
-    echo Done...
-    cls
-    color b
-    goto MENU2
-) else (
-    echo Invalid choice. Please try again.
-    timeout /nobreak /t 2 >nul
-    goto menu2
-)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option16
-explorer https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/ar-SA/ProPlus2021Retail.img
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU2
