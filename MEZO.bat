@@ -361,31 +361,137 @@ exit
 
 
 :Option1
-@echo off
-CD /D "%~DP0"
 cls
+
 color c
-SET tmpfl=Process_List.txt
-IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
-SETLOCAL ENABLEDELAYEDEXPANSION
 
-FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LIST ^| FIND /I "Image name:"') DO (
-    SET var=%%~A
-    SET var=!var: =!
 
-    REM Check if the process is not a Windows process
-    ECHO !var! | FINDSTR /I /V /C:"System" | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" >nul
+setlocal enabledelayedexpansion
+SET tmpfl=PewPew.txt
 
-    IF !ERRORLEVEL! EQU 0 (
-        ECHO Terminating: !var!
-        TASKKILL /F /FI "USERNAME eq %Username%" /IM !var!
-    )
+taskkill /F /IM "CxAudMsg64.exe" >> "%tmpfl%"
+taskkill /F /IM "msedge.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ETDService.exe" >> "%tmpfl%"
+taskkill /F /IM "gameinputsvc.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservicesnet.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservices.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler64.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler.exe" >> "%tmpfl%"
+taskkill /F /IM "HuaweiHiSuiteService64.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxCUIService.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxEM.exe" >> "%tmpfl%"
+taskkill /F /IM "ibtsiva.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
+taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "SASrv.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "CptService.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "backgroundTaskHost.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "msiexec.exe" >> "%tmpfl%"
+taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
+taskkill /F /IM "audiodg.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "KingoSoftService.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAWebHelper.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "UserOOBEBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "MSI.TerminalServer.exe" >> "%tmpfl%"
+taskkill /F /IM "VoiceControl_Engine.exe" >> "%tmpfl%"
+taskkill /F /IM "DSATray.exe" >> "%tmpfl%"
+taskkill /F /IM "nvsphelper64.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAShare.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthSystray.exe" >> "%tmpfl%"
+taskkill /F /IM "RtkAudUService64.exe" >> "%tmpfl%"
+taskkill /F /IM "Discord.exe" >> "%tmpfl%"
+taskkill /F /IM "PresentMon_x64.exe" >> "%tmpfl%"
+taskkill /F /IM "nvrla.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUE.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUEDevicePluginHost.exe" >> "%tmpfl%"
+taskkill /F /IM "QmlRenderer.exe" >> "%tmpfl%"
+taskkill /F /IM "IDMan.exe" >> "%tmpfl%"
+taskkill /F /IM "CCXProcess.exe" >> "%tmpfl%"
+taskkill /F /IM "node.exe" >> "%tmpfl%"
+taskkill /F /IM "AdobeIPCBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "wallpaper32.exe" >> "%tmpfl%"
+taskkill /F /IM "EarTrumpet.exe" >> "%tmpfl%"
+taskkill /F /IM "TranslucentTB.exe" >> "%tmpfl%"
+taskkill /F /IM "LocationNotificationWindows.exe" >> "%tmpfl%"
+taskkill /F /IM "WidgetService.exe" >> "%tmpfl%"
+taskkill /F /IM "ApplicationFrameHost.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBar.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxGameBarWidgets.exe" >> "%tmpfl%"
+taskkill /F /IM "Video.UI.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBarFTServer.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxPcAppFT.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.Stub.exe" >> "%tmpfl%"
+taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
+taskkill /F /IM "CHXSmartScreen.exe" >> "%tmpfl%"
+taskkill /F /IM "nvcontainer.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchHost.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ShellExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "Notepad.exe" >> "%tmpfl%"
+taskkill /F /IM "atieclxx.exe" >> "%tmpfl%"
+taskkill /F /IM "atiesrxx.exe" >> "%tmpfl%"
+taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
+taskkill /F /IM "BtwRSupportService.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPEnhService.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
+taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
+taskkill /F /IM "notepad.exe" >> "%tmpfl%"
+taskkill /F /IM "printfilterpipelinesvc.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPHelper.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPEnh.exe" >> "%tmpfl%"
+taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
+taskkill /F /IM "Taskmgr.exe" >> "%tmpfl%"
+taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
+taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
+taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
+taskkill /F /IM "WMIADAP.exe" >> "%tmpfl%"
+
+echo Terminating non-system processes (excluding essential services)...
+
+for /F "tokens=2" %%i in ('TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running" ^| findstr /v "Image Name"') do (
+    set "process=%%i"
+    taskkill /F /IM !process!
 )
 
-
-taskkill /f /im "sihost.exe"
-
-taskkill /f /im "cmd.exe"
 timeout /nobreak /t 3 >nul
 echo Done...
 cls
@@ -393,7 +499,7 @@ color b
     goto MENU
 
 
-
+::  | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" 
 
 
 
@@ -719,7 +825,7 @@ color b
 
 :Option12
 
-NetSh Advfirewall set allprofiles state off
+NetSh Advfirewall set allprofiles state on
 echo Done...
 pause
 cls
