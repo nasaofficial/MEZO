@@ -12,7 +12,17 @@ Function: Terminates a group of processes using manually crafted Taskkill comman
 (((((In case the screen goes black and none of the above 3 options work, press SHIFT + CTRL + ESC, then click on "File," followed by "Run new task," and type explorer.exe, then press enter.)))))
 
 Option 4
-Function: Activates Microsoft Office by entering the activation key.
+Functions: 
+Activates Microsoft Office by entering the activation key.
+HWID (Digital License) Method to Permanently Activate Windows.
+Ohook Method to Permanently Activate Office.
+KMS38 Method to Activate Windows/Server Till the Year 2038.
+Online KMS Method to Activate Windows/Server/Office For 180 Days (Lifetime With Renewal Task).
+Advanced Activation Troubleshooting.
+$OEM$ Folders For Preactivation.
+Change Windows Edition.
+Check Windows/Office Activation Status.
+Available in All In One and Separate Files Versions.
 
 Option 5
 Function: Activates Windows 10 by entering the activation key.
