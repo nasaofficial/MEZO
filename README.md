@@ -76,7 +76,7 @@ Here is a Tutorial: [GitHub Installation Tutorial](https://github.com/nasaoffici
 2. Find MEZO folder.
 3. Find MEZO.bat and (RUN AS ADMINISTRATOR)
 
-# How How To Start The Tool (Using CLI):
+# How To Start The Tool (Using CLI):
 
 1. Go To Windows Search.
 2. Search For CMD.
