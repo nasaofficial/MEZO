@@ -47,6 +47,10 @@
 - Minimize the background processes on startup to increase the performance of the devices.
 
 
+*Where Are these?*
+https://github.com/nasaofficial/MEZO/blob/main/README%20(%20ENGLISH%20).md
+
+
 # How To Install:
 Open CMD as Administartor and copy paste these:
 
