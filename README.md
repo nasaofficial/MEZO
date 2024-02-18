@@ -46,6 +46,20 @@
 
 - Minimize the background processes on startup to increase the performance of the devices.
 
+- Remove Temporary Files.
+
+- Disable X-Box Services.
+
+- Tweak Current Windows Version ( NOT TESTED ON WINDOWS 11 ) + ( VERY DANGEORUS ) + ( FOR WEAK DEVICES ONLY ).
+
+- Wifi Fixer.
+
+- Turn On Wifi.
+
+- Wifi Additional Service Fixer.
+
+- Disable Wifi Service.
+
 
 *Where Are these?*
 https://github.com/nasaofficial/MEZO/blob/main/README%20(%20ENGLISH%20).md
