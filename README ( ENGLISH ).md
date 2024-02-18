@@ -67,15 +67,15 @@ Functions:
 
 1. Minimize the background processes on startup to increase the performance of the devices.
 
-2. Coming Soon...
+2. Remove Temporary Files.
 
-3. Coming Soon...
+3. Disable X-Box Service.
 
-4. Coming Soon...
+4. Tweak Current Windows ( NOT RECOMMENDED ).
 
-5. Coming Soon...
+5. Wifi Fixer.
 
-6. Coming Soon...
+6. Disable Wifi.
 
 7. Goes back to previous menu.
 
