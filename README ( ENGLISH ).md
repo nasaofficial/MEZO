@@ -33,7 +33,7 @@ Functions:
 
 - Available in All In One and Separate Files Versions.
 
-5. Activates Windows 10 by entering the activation key.
+5. Activates Windows 10 and Windows 7 by entering the activation key.
 
 6. Activates Windows 11 by entering the activation key.
 
