@@ -52,7 +52,7 @@ echo              #                                                             
 echo              #    3. Multiple Taskkill commands            4. Microsoft Office Activation + Others         #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    5. Windows 10 Activation                 6. Windows 11 Activation                        #
+echo              #    5. Windows 10 , 7 Activation             6. Windows 11 Activation                        #
 echo              #                                                                                             #
 echo              #                                                                                             #
 echo              #    7. Powershell Tweaks                     8. More Options                                 #
@@ -75,7 +75,7 @@ if errorlevel 9 goto HELP
 if errorlevel 8 goto menu2
 if errorlevel 7 goto option7
 if errorlevel 6 goto option6
-if errorlevel 5 goto option5
+if errorlevel 5 goto win107
 if errorlevel 4 goto option4
 if errorlevel 3 goto option3
 if errorlevel 2 goto option2
@@ -726,7 +726,7 @@ if %i% EQU 3 set KMS=kms9.MSGuides.com
 if %i% GTR 3 goto ato
 cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
 :ato
-echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at MEZOelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #Please consider supporting this project: donate.msguides.com&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 exit) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
+echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #Please consider supporting this project: donate.msguides.com&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 exit) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
 explorer "https://t.me/id9p0"&goto halt
 :notsupported
 echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
@@ -2028,6 +2028,93 @@ goto MENU2
 
 
 
+:win107
+cls
+color b
+echo.
+echo.
+echo 1. Activate Windows 7
+echo.
+echo 2. Activate Windows 10
+echo.
+echo.
+echo.
+echo.
+choice /n /c 12 /m "Enter the number of your choice:"
+
+
+if errorlevel 2 goto windows10a
+if errorlevel 1 goto windows7a
+
+
+
+
+:windows7a
+@echo off
+color a
+title Activate Windows 7 BY MEZO (+966 54 206 0259) (ALL versions) for FREE!
+cls
+echo #Project: Activating Microsoft software products for FREE without software
+echo #Supported products:
+echo - Windows 7 Professional
+echo - Windows 7 Professional N
+echo - Windows 7 Professional E
+echo - Windows 7 Enterprise
+echo - Windows 7 Enterprise N
+echo - Windows 7 Enterprise E
+echo =======================================================================
+echo MEZO is Activating your Windows...
+cd /d %windir%\system32
+cscript //nologo slmgr.vbs /upk >nul
+cscript //nologo slmgr.vbs /cpky >nul
+wmic os | findstr /I "enterprise" >nul
+if %errorlevel% EQU 0 (
+    cscript //nologo slmgr.vbs /ipk 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH >nul
+    cscript //nologo slmgr.vbs /ipk YDRBP-3D83W-TY26F-D46B2-XCKRJ >nul
+    cscript //nologo slmgr.vbs /ipk C29WB-22CC8-VJ326-GHFJW-H9DH4 >nul
+) else (
+    cscript //nologo slmgr.vbs /ipk FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 >nul
+    cscript //nologo slmgr.vbs /ipk MRPKT-YTG23-K7D7T-X2JMM-QY7MG >nul
+    cscript //nologo slmgr.vbs /ipk W82YF-2Q76Y-63HXB-FGJG9-GF7QX >nul
+)
+set i=1
+:server
+if %i%==1 set KMS_Sev=kms7.MSGuides.com
+if %i%==2 set KMS_Sev=kms8.MSGuides.com
+if %i%==3 set KMS_Sev=kms9.MSGuides.com
+if %i%==4 goto unsupported
+cscript //nologo slmgr.vbs /skms %KMS_Sev%:1688 >nul
+echo =======================================================================
+echo.
+echo. cscript //nologo slmgr.vbs /ato | find /i "successfully" && (
+echo. =======================================================================
+echo. #My official number: +966542060259
+echo. #How it works: It Just Does
+echo. #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.
+echo. #Your support is helping me keep my servers running everyday!
+echo. =======================================================================
+choice /n /c YN /m "Would you like to Contact me on telegram [Y,N]?"
+if errorlevel 2 exit
+) || (
+echo The connection to my KMS server failed! Trying to connect to another one...
+echo Please wait...
+echo.
+echo.
+set /a i+=1
+goto server
+)
+explorer "https://t.me/id9p0"
+goto halt
+:unsupported
+echo =======================================================================
+echo. Sorry! Your version is not supported.
+:halt
+pause
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+goto MENU
 
 
 
@@ -2035,7 +2122,7 @@ goto MENU2
 
 
 
-:Option5
+:windows10a
 @echo off
 color a
 title Activate Windows 10 BY MEZO (+966 54 206 0259) (ALL versions) for FREE&cls&echo =====================================================================================&echo #Project: Activating Microsoft software products for FREE without additional software&echo =====================================================================================&echo.&echo #Supported products:&echo - Windows 10 Home&echo - Windows 10 Professional&echo - Windows 10 Education&echo - Windows 10 Enterprise&echo.&echo.&echo ============================================================================&echo MEZO is Activating your Windows...&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /cpky >nul&set i=1&wmic os | findstr /I "enterprise" >nul
@@ -2051,7 +2138,7 @@ if %i% EQU 3 set KMS=kms9.MSGuides.com
 if %i% GTR 3 goto ato
 cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
 :ato
-echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at MEZOelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #my servers running 24/7!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 pause) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
+echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #my servers running 24/7!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 pause) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
 explorer "https://t.me/id9p0"&goto halt
 :notsupported
 echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
@@ -2063,6 +2150,7 @@ echo Done...
 cls
 color b
     goto MENU
+
 
 
 
