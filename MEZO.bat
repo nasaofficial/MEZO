@@ -398,10 +398,73 @@ if errorlevel 1 goto ManualServices
 
 
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:MENU4
+
+@echo off
+    
+title Comination Made By MEZO
+
+cls 
+
+color d
+
+:: Display custom messages with color using ANSI escape codes
+echo.
+echo.           
+echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
+echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
+echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
+echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
+echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
+echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
+echo.
+echo.
+echo.
+echo.
+color 7
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo              #                                                                                             # 
+echo              #    1. Increase Power Efficiency             2.                                              #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    3. 			                4.                                              #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    5.	                                6. Disable Wifi                                 #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    7. Back                                  8. More Options                                 #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    9. Call For Help                                                                         #
+echo              #                                                                                             #
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.
+echo.
+echo.
+
+
+choice /n /c 123456789 /m "Enter the number of your choice:"
+
+rem Check the user's choice and perform the corresponding action
+if errorlevel 9 goto HELP
+if errorlevel 8 goto soon1
+if errorlevel 7 goto menu4
+if errorlevel 6 goto soon1
+if errorlevel 5 goto soon1
+if errorlevel 4 goto soon1
+if errorlevel 3 goto soon1
+if errorlevel 2 goto soon1
+if errorlevel 1 goto IncreasePowerEfficiency
 
 
 
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :Option1
 cls
 
@@ -5371,7 +5434,8 @@ color b
 
 
 
-
+:IncreasePowerEfficiency
+regedit /s "Increase Power Efficiency.reg"
 
 
 
