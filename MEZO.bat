@@ -386,7 +386,7 @@ choice /n /c 123456789 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
-if errorlevel 8 goto menu4
+if errorlevel 8 goto menu5
 if errorlevel 7 goto menu2
 if errorlevel 6 goto DisableWifi
 if errorlevel 5 goto WifiFixer
