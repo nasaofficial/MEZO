@@ -429,10 +429,10 @@ echo              #                                                             
 echo              #    1. Increase Power Efficiency             2.                                              #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    3. 			                4.                                              #
+echo              #    3.                                       4.                                              #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    5.	                                6. Disable Wifi                                 #
+echo              #    5.                                       6. Disable Wifi                                 #
 echo              #                                                                                             #
 echo              #                                                                                             #
 echo              #    7. Back                                  8. More Options                                 #
