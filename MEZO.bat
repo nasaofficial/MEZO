@@ -423,7 +423,7 @@ echo.
 echo.
 echo.
 echo.
-color 7
+color d
 echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 echo              #                                                                                             # 
 echo              #    1. Increase Power Efficiency             2.                                              #
