@@ -386,7 +386,7 @@ choice /n /c 123456789 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
-if errorlevel 8 goto menu5
+if errorlevel 8 goto soon1
 if errorlevel 7 goto menu2
 if errorlevel 6 goto DisableWifi
 if errorlevel 5 goto WifiFixer
@@ -400,7 +400,7 @@ if errorlevel 1 goto ManualServices
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:MENU5
+:MENU4
 
 @echo off
     
@@ -5436,7 +5436,11 @@ color b
 
 :IncreasePowerEfficiency
 regedit /s "Increase Power Efficiency.reg"
-
+echo Power Efficiency Increased successfully...
+timeout /nobreak /t 3 >nul
+cls
+color b
+    goto MENU5
 
 
 
