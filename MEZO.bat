@@ -5212,7 +5212,7 @@ if errorlevel 1 goto TurnSearchIndexingOff
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :IncreasePowerEfficiency
-regedit /s "Increase Power Efficiency.reg"
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1" /v "Attributes" /t REG_SZ /d "2" /f
 echo Power Efficiency Increased Successfully...
 timeout /nobreak /t 3 >nul
 cls
