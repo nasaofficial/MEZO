@@ -1948,7 +1948,7 @@ choice /n /c 123456789 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
-if errorlevel 8 goto menu5
+if errorlevel 8 goto MENU4
 if errorlevel 7 goto menu2
 if errorlevel 6 goto DisableWifi
 if errorlevel 5 goto WifiFixer
@@ -5146,7 +5146,7 @@ color b
 
 
 
-:MENU5
+:MENU4
 
 @echo off
     
@@ -5175,7 +5175,7 @@ echo              #                                                             
 echo              #    1. Turn Search Indexing Off              2. Turn Search Indexing On                      #
 echo              #                                                                                             #
 echo              #                                                                                             #
-echo              #    3. Increase Power Efficiency             4.                                              #
+echo              #    3. Increase Power Efficiency             4. Ram Optimizer                                #
 echo              #                                                                                             #
 echo              #                                                                                             #
 echo              #    5.                                       6.                                              #
@@ -5200,7 +5200,7 @@ if errorlevel 8 goto soon1
 if errorlevel 7 goto MENU3
 if errorlevel 6 goto soon1
 if errorlevel 5 goto soon1
-if errorlevel 4 goto soon1
+if errorlevel 4 goto RamOptimizer
 if errorlevel 3 goto IncreasePowerEfficiency
 if errorlevel 2 goto TurnSearchIndexingOn
 if errorlevel 1 goto TurnSearchIndexingOff
@@ -5217,7 +5217,7 @@ echo Power Efficiency Increased Successfully...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU5
+    goto MENU4
 
 
 
@@ -5246,7 +5246,7 @@ echo Search Indexing Turned Off Successfully ...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU5
+    goto MENU4
 
 
 
@@ -5273,9 +5273,255 @@ echo Search Indexing Turned On Successfully ...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU5
+    goto MENU4
 
 
+
+
+
+:RamOptimizer
+cls
+color b
+echo.
+echo.
+echo.
+echo.
+echo                                 ======================= Ram Optimizer =======================
+echo                                 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+echo                                 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.                                   
+echo                                 #  [1] 2 Ram             [2] 3 Ram              [3] 4 Ram  #
+echo.                                                                                          
+echo                                 #  [4] 6 Ram             [5] 8 Ram              [6] 10 Ram #
+echo.                                   
+echo                                 #  [7] 12 Ram            [8] 16 Ram             [9] 20 Ram #
+echo.                                 
+echo                                 #  [10] 24 Ram           [11] 32 Ram           [12] 48 Ram #
+echo.
+echo                                 #                        [13] 64 Ram                       #
+echo.
+echo                                 #                                                          #
+echo.
+echo                                 #  [14] Set Ram To Default                       [15] Back #
+echo.
+echo                                 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.
+echo.
+echo.
+echo.
+
+
+set /p choice=Enter your choice ( 0 - 15 ) :
+
+ if "%choice%"=="1" goto 2Ram
+ if "%choice%"=="2" goto 3Ram
+ if "%choice%"=="3" goto 4Ram
+ if "%choice%"=="4" goto 6Ram
+ if "%choice%"=="5" goto 8Ram
+ if "%choice%"=="6" goto 10Ram
+ if "%choice%"=="7" goto 12Ram
+ if "%choice%"=="8" goto 16Ram
+ if "%choice%"=="9" goto 20Ram
+ if "%choice%"=="10" goto 24Ram
+ if "%choice%"=="11" goto 32Ram
+ if "%choice%"=="12" goto 48Ram
+ if "%choice%"=="13" goto 64Ram
+ if "%choice%"=="14" goto RamDefault
+ if "%choice%"=="15" goto menu4
+
+
+ :2Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "2Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+
+
+
+
+ :3Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "3Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+
+
+
+ 
+ :4Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "4Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :6Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "6Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :8Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "8Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :10Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "10Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :12Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "12Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :16Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "16Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :20Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "20Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :24Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "24Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :32Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "32Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :48Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "48Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :64Ram
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "64Ram.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
+    
+
+
+
+ :RamDefault
+ cd /d %~dp0
+ cd RamOptimizer
+ regedit "ResetDefault.reg"
+ echo Ram Optimized Successfully...
+timeout /nobreak /t 3 >nul
+cd /d %~dp0
+cls
+color b
+    goto MENU4
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::::(End Of Codes):::::::::::::::::::::::::::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -5776,21 +6022,7 @@ echo Done...
 cls
 color b
     goto MENU
-
-
-
-
-
-
 =-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-=-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
-
 
 
 :Option4
