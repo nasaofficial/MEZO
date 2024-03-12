@@ -73,13 +73,158 @@ rem Check the user's choice and perform the corresponding action
 
 if errorlevel 9 goto HELP
 if errorlevel 8 goto menu2
-if errorlevel 7 goto option7
-if errorlevel 6 goto option6
+if errorlevel 7 goto PowershellTweaks
+if errorlevel 6 goto win11
 if errorlevel 5 goto win107
 if errorlevel 4 goto option4
-if errorlevel 3 goto option3
-if errorlevel 2 goto option2
-if errorlevel 1 goto option1
+if errorlevel 3 goto MultipleTaskkillcommands
+if errorlevel 2 goto TasklistwithExclusionsandTaskkill
+if errorlevel 1 goto TasklistandTaskkill
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::(Codes)::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:TasklistandTaskkill
+cls
+
+color c
+
+
+setlocal enabledelayedexpansion
+SET tmpfl=PewPew.txt
+
+taskkill /F /IM "CxAudMsg64.exe" >> "%tmpfl%"
+taskkill /F /IM "msedge.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ETDService.exe" >> "%tmpfl%"
+taskkill /F /IM "gameinputsvc.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservicesnet.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservices.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler64.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler.exe" >> "%tmpfl%"
+taskkill /F /IM "HuaweiHiSuiteService64.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxCUIService.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxEM.exe" >> "%tmpfl%"
+taskkill /F /IM "ibtsiva.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
+taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "SASrv.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "CptService.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "backgroundTaskHost.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "msiexec.exe" >> "%tmpfl%"
+taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
+taskkill /F /IM "audiodg.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "KingoSoftService.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAWebHelper.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "UserOOBEBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "MSI.TerminalServer.exe" >> "%tmpfl%"
+taskkill /F /IM "VoiceControl_Engine.exe" >> "%tmpfl%"
+taskkill /F /IM "DSATray.exe" >> "%tmpfl%"
+taskkill /F /IM "nvsphelper64.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAShare.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthSystray.exe" >> "%tmpfl%"
+taskkill /F /IM "RtkAudUService64.exe" >> "%tmpfl%"
+taskkill /F /IM "Discord.exe" >> "%tmpfl%"
+taskkill /F /IM "PresentMon_x64.exe" >> "%tmpfl%"
+taskkill /F /IM "nvrla.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUE.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUEDevicePluginHost.exe" >> "%tmpfl%"
+taskkill /F /IM "QmlRenderer.exe" >> "%tmpfl%"
+taskkill /F /IM "IDMan.exe" >> "%tmpfl%"
+taskkill /F /IM "CCXProcess.exe" >> "%tmpfl%"
+taskkill /F /IM "node.exe" >> "%tmpfl%"
+taskkill /F /IM "AdobeIPCBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "wallpaper32.exe" >> "%tmpfl%"
+taskkill /F /IM "EarTrumpet.exe" >> "%tmpfl%"
+taskkill /F /IM "TranslucentTB.exe" >> "%tmpfl%"
+taskkill /F /IM "LocationNotificationWindows.exe" >> "%tmpfl%"
+taskkill /F /IM "WidgetService.exe" >> "%tmpfl%"
+taskkill /F /IM "ApplicationFrameHost.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBar.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxGameBarWidgets.exe" >> "%tmpfl%"
+taskkill /F /IM "Video.UI.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBarFTServer.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxPcAppFT.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.Stub.exe" >> "%tmpfl%"
+taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
+taskkill /F /IM "CHXSmartScreen.exe" >> "%tmpfl%"
+taskkill /F /IM "nvcontainer.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchHost.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ShellExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "Notepad.exe" >> "%tmpfl%"
+taskkill /F /IM "atieclxx.exe" >> "%tmpfl%"
+taskkill /F /IM "atiesrxx.exe" >> "%tmpfl%"
+taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
+taskkill /F /IM "BtwRSupportService.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPEnhService.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
+taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
+taskkill /F /IM "notepad.exe" >> "%tmpfl%"
+taskkill /F /IM "printfilterpipelinesvc.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
+taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPHelper.exe" >> "%tmpfl%"
+taskkill /F /IM "SynTPEnh.exe" >> "%tmpfl%"
+taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
+taskkill /F /IM "Taskmgr.exe" >> "%tmpfl%"
+taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
+taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
+taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
+taskkill /F /IM "WMIADAP.exe" >> "%tmpfl%"
+
+echo Terminating non-system processes (excluding essential services)...
+
+for /F "tokens=2" %%i in ('TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running" ^| findstr /v "Image Name"') do (
+    set "process=%%i"
+    taskkill /F /IM !process!
+)
+
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+    goto MENU
+
+
+::  | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" 
 
 
 
@@ -89,7 +234,355 @@ if errorlevel 1 goto option1
 
 
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+:TasklistwithExclusionsandTaskkill
+@echo off
+CD /D "%~DP0"
+
+cls
+color d
+SET tmpfl=TaskList_Lite.txt
+IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
+SET important_processes=conhost.exe lsm.exe winmgmt.exe explorer.exe winlogon.exe lsass.exe services.exe wininit.exe csrss.exe smss.exe System.exe
+SETLOCAL ENABLEDELAYEDEXPANSION
+FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LIST ^| FIND /I "Image name:"') DO (
+    SET var=%%~A
+    SET var=!var: =!
+    ECHO !var! | FINDSTR /I /V /C:"System" /C:"Idle" /C:"explorer.exe" /C:"wininit.exe" /C:"services.exe" /C:"lsass.exe" /C:"winlogon.exe" /C:"winmgmt.exe" /C:"csrss.exe" /C:"smss.exe" /C:"lsm.exe" /C:"conhost.exe" /C:"sihost.exe">>"%tmpfl%"
+)
+FOR /F "USEBACKQ TOKENS=*" %%A IN ("%tmpfl%") DO (
+    TASKKILL /F /FI "USERNAME eq %Username%" /IM %%~A
+)
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:MultipleTaskkillcommands
+@echo off
+CD /D "%~DP0"
+
+color f
+cls
+SET tmpfl=TaskList_HandMade.txt
+IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
+taskkill /F /IM "CxAudMsg64.exe" >> "%tmpfl%"
+taskkill /F /IM "msedge.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ETDService.exe" >> "%tmpfl%"
+taskkill /F /IM "gameinputsvc.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservicesnet.exe" >> "%tmpfl%"
+taskkill /F /IM "gamingservices.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler64.exe" >> "%tmpfl%"
+taskkill /F /IM "GoogleCrashHandler.exe" >> "%tmpfl%"
+taskkill /F /IM "HuaweiHiSuiteService64.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxCUIService.exe" >> "%tmpfl%"
+taskkill /F /IM "igfxEM.exe" >> "%tmpfl%"
+taskkill /F /IM "ibtsiva.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
+taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
+taskkill /F /IM "SASrv.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "CptService.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "backgroundTaskHost.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "msiexec.exe" >> "%tmpfl%"
+taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
+taskkill /F /IM "audiodg.exe" >> "%tmpfl%"
+taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
+taskkill /F /IM "KingoSoftService.exe" >> "%tmpfl%"
+taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAWebHelper.exe" >> "%tmpfl%"
+taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
+taskkill /F /IM "UserOOBEBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
+taskkill /F /IM "MSI.TerminalServer.exe" >> "%tmpfl%"
+taskkill /F /IM "VoiceControl_Engine.exe" >> "%tmpfl%"
+taskkill /F /IM "DSATray.exe" >> "%tmpfl%"
+taskkill /F /IM "nvsphelper64.exe" >> "%tmpfl%"
+taskkill /F /IM "NVIDIAShare.exe" >> "%tmpfl%"
+taskkill /F /IM "SecurityHealthSystray.exe" >> "%tmpfl%"
+taskkill /F /IM "RtkAudUService64.exe" >> "%tmpfl%"
+taskkill /F /IM "Discord.exe" >> "%tmpfl%"
+taskkill /F /IM "PresentMon_x64.exe" >> "%tmpfl%"
+taskkill /F /IM "nvrla.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUE.exe" >> "%tmpfl%"
+taskkill /F /IM "iCUEDevicePluginHost.exe" >> "%tmpfl%"
+taskkill /F /IM "QmlRenderer.exe" >> "%tmpfl%"
+taskkill /F /IM "IDMan.exe" >> "%tmpfl%"
+taskkill /F /IM "CCXProcess.exe" >> "%tmpfl%"
+taskkill /F /IM "node.exe" >> "%tmpfl%"
+taskkill /F /IM "AdobeIPCBroker.exe" >> "%tmpfl%"
+taskkill /F /IM "wallpaper32.exe" >> "%tmpfl%"
+taskkill /F /IM "EarTrumpet.exe" >> "%tmpfl%"
+taskkill /F /IM "TranslucentTB.exe" >> "%tmpfl%"
+taskkill /F /IM "LocationNotificationWindows.exe" >> "%tmpfl%"
+taskkill /F /IM "WidgetService.exe" >> "%tmpfl%"
+taskkill /F /IM "ApplicationFrameHost.exe" >> "%tmpfl%"
+taskkill /F /IM "Taskmgr.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBar.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxGameBarWidgets.exe" >> "%tmpfl%"
+taskkill /F /IM "Video.UI.exe" >> "%tmpfl%"
+taskkill /F /IM "GameBarFTServer.exe" >> "%tmpfl%"
+taskkill /F /IM "XboxPcAppFT.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.Stub.exe" >> "%tmpfl%"
+taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
+taskkill /F /IM "CHXSmartScreen.exe" >> "%tmpfl%"
+taskkill /F /IM "nvcontainer.exe" >> "%tmpfl%"
+taskkill /F /IM "Telegram.exe" >> "%tmpfl%"
+taskkill /F /IM "SearchHost.exe" >> "%tmpfl%"
+taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "ShellExperienceHost.exe" >> "%tmpfl%"
+taskkill /F /IM "Notepad.exe" >> "%tmpfl%"
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+:win107
+cls
+color b
+echo.
+echo.
+echo 1. Activate Windows 7
+echo.
+echo 2. Activate Windows 10
+echo.
+echo.
+echo.
+echo.
+choice /n /c 12 /m "Enter the number of your choice:"
+
+
+if errorlevel 2 goto windows10a
+if errorlevel 1 goto windows7a
+
+
+
+
+:windows7a
+@echo off
+color a
+title Activate Windows 7 BY MEZO (+966 54 206 0259) (ALL versions) for FREE!
+cls
+echo #Project: Activating Microsoft software products for FREE without software
+echo #Supported products:
+echo - Windows 7 Professional
+echo - Windows 7 Professional N
+echo - Windows 7 Professional E
+echo - Windows 7 Enterprise
+echo - Windows 7 Enterprise N
+echo - Windows 7 Enterprise E
+echo =======================================================================
+echo MEZO is Activating your Windows...
+cd /d %windir%\system32
+cscript //nologo slmgr.vbs /upk >nul
+cscript //nologo slmgr.vbs /cpky >nul
+wmic os | findstr /I "enterprise" >nul
+if %errorlevel% EQU 0 (
+    cscript //nologo slmgr.vbs /ipk 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH >nul
+    cscript //nologo slmgr.vbs /ipk YDRBP-3D83W-TY26F-D46B2-XCKRJ >nul
+    cscript //nologo slmgr.vbs /ipk C29WB-22CC8-VJ326-GHFJW-H9DH4 >nul
+) else (
+    cscript //nologo slmgr.vbs /ipk FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 >nul
+    cscript //nologo slmgr.vbs /ipk MRPKT-YTG23-K7D7T-X2JMM-QY7MG >nul
+    cscript //nologo slmgr.vbs /ipk W82YF-2Q76Y-63HXB-FGJG9-GF7QX >nul
+)
+set i=1
+:server
+if %i%==1 set KMS_Sev=kms7.MSGuides.com
+if %i%==2 set KMS_Sev=kms8.MSGuides.com
+if %i%==3 set KMS_Sev=kms9.MSGuides.com
+if %i%==4 goto unsupported
+cscript //nologo slmgr.vbs /skms %KMS_Sev%:1688 >nul
+echo =======================================================================
+echo.
+echo. cscript //nologo slmgr.vbs /ato | find /i "successfully" && (
+echo. =======================================================================
+echo. #My official number: +966542060259
+echo. #How it works: It Just Does
+echo. #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.
+echo. #Your support is helping me keep my servers running everyday!
+echo. =======================================================================
+choice /n /c YN /m "Would you like to Contact me on telegram [Y,N]?"
+if errorlevel 2 exit
+) || (
+echo The connection to my KMS server failed! Trying to connect to another one...
+echo Please wait...
+echo.
+echo.
+set /a i+=1
+goto server
+)
+explorer "https://t.me/id9p0"
+goto halt
+:unsupported
+echo =======================================================================
+echo. Sorry! Your version is not supported.
+:halt
+pause
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+goto MENU
+
+
+
+
+
+
+
+:windows10a
+@echo off
+color a
+title Activate Windows 10 BY MEZO (+966 54 206 0259) (ALL versions) for FREE&cls&echo =====================================================================================&echo #Project: Activating Microsoft software products for FREE without additional software&echo =====================================================================================&echo.&echo #Supported products:&echo - Windows 10 Home&echo - Windows 10 Professional&echo - Windows 10 Education&echo - Windows 10 Enterprise&echo.&echo.&echo ============================================================================&echo MEZO is Activating your Windows...&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /cpky >nul&set i=1&wmic os | findstr /I "enterprise" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43 >nul||cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 >nul||cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B >nul||cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV >nul||cscript //nologo slmgr.vbs /ipk WNMTR-4C88C-JK8YV-HQ7T2-76DF9 >nul||cscript //nologo slmgr.vbs /ipk 2F77B-TNFGY-69QQF-B8YKP-D69TJ >nul||cscript //nologo slmgr.vbs /ipk DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ >nul||cscript //nologo slmgr.vbs /ipk QFFDN-GRT3P-VKWWX-X7T3R-8B639 >nul||cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D >nul||cscript //nologo slmgr.vbs /ipk 92NFX-8DJQP-P6BBQ-THF9C-7CG2H >nul&goto skms) else wmic os | findstr /I "home" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 >nul||cscript //nologo slmgr.vbs /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM >nul||cscript //nologo slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH >nul||cscript //nologo slmgr.vbs /ipk PVMJN-6DFY6-9CCP6-7BKTT-D3WVR >nul&goto skms) else wmic os | findstr /I "education" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 >nul||cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ >nul&goto skms) else wmic os | findstr /I "10 pro" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX >nul||cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9 >nul||cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J >nul||cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF >nul||cscript //nologo slmgr.vbs /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y >nul||cscript //nologo slmgr.vbs /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC >nul&goto skms) else (goto notsupported)
+:skms
+if %i% GTR 10 goto busy
+if %i% EQU 1 set KMS=kms7.MSGuides.com
+if %i% EQU 2 set KMS=kms8.MSGuides.com
+if %i% EQU 3 set KMS=kms9.MSGuides.com
+if %i% GTR 3 goto ato
+cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
+:ato
+echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #my servers running 24/7!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 pause) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
+explorer "https://t.me/id9p0"&goto halt
+:notsupported
+echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
+:busy
+echo ============================================================================&echo.&echo MEZO SAYS: Sorry, the server is busy and can't respond to your request. Please try again.&echo.
+:halt
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+:win11
+color e
+@echo off
+title Activate Windows 11 BY MEZO (+966 54 206 0259) (ALL versions) for FREE&cls&echo =====================================================================================&echo #Project: Activating Microsoft software products for FREE without additional software&echo =====================================================================================&echo.&echo #Supported products:&echo - Windows 11 Home&echo - Windows 11 Professional&echo - Windows 11 Education&echo - Windows 11 Enterprise&echo.&echo.&echo ============================================================================&echo Activating your Windows...&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /cpky >nul&set i=1&wmic os | findstr /I "enterprise" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43 >nul||cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 >nul||cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B >nul||cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV >nul||cscript //nologo slmgr.vbs /ipk WNMTR-4C88C-JK8YV-HQ7T2-76DF9 >nul||cscript //nologo slmgr.vbs /ipk 2F77B-TNFGY-69QQF-B8YKP-D69TJ >nul||cscript //nologo slmgr.vbs /ipk DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ >nul||cscript //nologo slmgr.vbs /ipk QFFDN-GRT3P-VKWWX-X7T3R-8B639 >nul||cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D >nul||cscript //nologo slmgr.vbs /ipk 92NFX-8DJQP-P6BBQ-THF9C-7CG2H >nul&goto skms) else wmic os | findstr /I "home" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 >nul||cscript //nologo slmgr.vbs /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM >nul||cscript //nologo slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH >nul||cscript //nologo slmgr.vbs /ipk PVMJN-6DFY6-9CCP6-7BKTT-D3WVR >nul&goto skms) else wmic os | findstr /I "education" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 >nul||cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ >nul&goto skms) else wmic os | findstr /I "11 pro" >nul
+if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX >nul||cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9 >nul||cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J >nul||cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF >nul||cscript //nologo slmgr.vbs /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y >nul||cscript //nologo slmgr.vbs /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC >nul&goto skms) else (goto notsupported)
+:skms
+if %i% GTR 10 goto busy
+if %i% EQU 1 set KMS=kms7.MSGuides.com
+if %i% EQU 2 set KMS=kms8.MSGuides.com
+if %i% EQU 3 set KMS=kms9.MSGuides.com
+if %i% GTR 3 goto ato
+cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
+:ato
+echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #Please consider supporting this project: donate.msguides.com&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 exit) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
+explorer "https://t.me/id9p0"&goto halt
+:notsupported
+echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
+:busy
+echo ============================================================================&echo.&echo MEZO SAYS: Sorry, the server is busy and can't respond to your request. Please try again.&echo.
+:halt
+timeout /nobreak /t 3 >nul
+echo Done...
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+:PowershellTweaks
+
+@echo off
+
+color 3
+cls
+
+:: Check if the script is running with administrative privileges
+NET FILE 1>NUL 2>NUL
+if %errorlevel% == 0 (
+    goto :runPowerShell
+) else (
+    echo Please run this script as an administrator.
+    pause
+cls
+    goto menu
+)
+
+:runPowerShell
+:: Run the PowerShell command
+PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& {iwr -useb https://christitus.com/win | iex}"
+
+:: Check the exit code of PowerShell
+if %errorlevel% neq 0 (
+    echo An error occurred while running PowerShell command.
+    pause
+    goto MENU
+)
+
+echo PowerShell command executed successfully.
+
+:: Open CMD to the same directory
+start cmd /k "cd /d "%~dp0" && call mezo.bat"
+
+exit 
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::(End Of Codes):::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
@@ -146,18 +639,65 @@ choice /n /c 123456789 /m "Enter the number of your choice:"
 
 rem Check the user's choice and perform the corresponding action
 if errorlevel 9 goto HELP
-if errorlevel 8 goto menu4
+if errorlevel 8 goto menu3
 if errorlevel 7 goto menu
-if errorlevel 6 goto option16
+if errorlevel 6 goto OfficeDownload
 if errorlevel 5 goto Windows10english
 if errorlevel 4 goto Windows11english
-if errorlevel 3 goto menu3
-if errorlevel 2 goto option12
-if errorlevel 1 goto option11
+if errorlevel 3 goto AppInstallerMenu
+if errorlevel 2 goto TurnOnFirewall
+if errorlevel 1 goto FixCorruptSystemFiles
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-:MENU3
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::(Codes)::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+:FixCorruptSystemFiles
+
+cls
+
+color 70
+
+SFC /SCANNOW
+echo Scanning...
+
+Dism /Online /Cleanup-Image /RestoreHealth
+echo Restoring IMG
+
+timeout /nobreak /t 3 >nul
+echo Done...
+
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+
+
+
+:TurnOnFirewall
+
+NetSh Advfirewall set allprofiles state on
+echo Done...
+pause
+cls
+color b
+    goto MENU
+
+
+
+
+
+
+:AppInstallerMenu
 color a
 cls 
 
@@ -330,627 +870,8 @@ set /p choice=Enter your choice ( 0 - 107 ) :
  if "%choice%"=="999" goto menu2
  if "%choice%"=="911" goto HELP
 
-else echo Option not found! Returning to Menu 3.
-    goto menu3
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:MENU4
-
-
-
-@echo off
-    
-title Comination Made By MEZO
-
-cls 
-
-color 7
-
-:: Display custom messages with color using ANSI escape codes
-echo.
-echo.           
-echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
-echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
-echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
-echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
-echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
-echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
-echo.
-echo.
-echo.
-echo.
-color 7
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-echo              #                                                                                             # 
-echo              #    1. Set Unwanted Services To Manual       2. Remove Temporary Files                       #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    3. Disable Xbox Services                 4. Tweak Curren Version (Not Recommended)       #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    5. WiFi Fixer                            6. Disable Wifi                                 #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    7. Back                                  8. More Options                                 #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    9. Call For Help                                                                         #
-echo              #                                                                                             #
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-echo.
-echo.
-echo.
-
-
-choice /n /c 123456789 /m "Enter the number of your choice:"
-
-rem Check the user's choice and perform the corresponding action
-if errorlevel 9 goto HELP
-if errorlevel 8 goto menu5
-if errorlevel 7 goto menu2
-if errorlevel 6 goto DisableWifi
-if errorlevel 5 goto WifiFixer
-if errorlevel 4 goto TweakCurrentVersion
-if errorlevel 3 goto DisableXboxServices
-if errorlevel 2 goto DelTempFiles
-if errorlevel 1 goto ManualServices
-
-
-
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:MENU5
-
-@echo off
-    
-title Comination Made By MEZO
-
-cls 
-
-color d
-
-:: Display custom messages with color using ANSI escape codes
-echo.
-echo.           
-echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
-echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
-echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
-echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
-echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
-echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
-echo.
-echo.
-echo.
-echo.
-color d
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-echo              #                                                                                             # 
-echo              #    1. Increase Power Efficiency             2.                                              #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    3.                                       4.                                              #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    5.                                       6. Disable Wifi                                 #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    7. Back                                  8. More Options                                 #
-echo              #                                                                                             #
-echo              #                                                                                             #
-echo              #    9. Call For Help                                                                         #
-echo              #                                                                                             #
-echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-echo.
-echo.
-echo.
-
-
-choice /n /c 123456789 /m "Enter the number of your choice:"
-
-rem Check the user's choice and perform the corresponding action
-if errorlevel 9 goto HELP
-if errorlevel 8 goto soon1
-if errorlevel 7 goto menu4
-if errorlevel 6 goto soon1
-if errorlevel 5 goto soon1
-if errorlevel 4 goto soon1
-if errorlevel 3 goto soon1
-if errorlevel 2 goto soon1
-if errorlevel 1 goto IncreasePowerEfficiency
-
-
-
-
-
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:Option1
-cls
-
-color c
-
-
-setlocal enabledelayedexpansion
-SET tmpfl=PewPew.txt
-
-taskkill /F /IM "CxAudMsg64.exe" >> "%tmpfl%"
-taskkill /F /IM "msedge.exe" >> "%tmpfl%"
-taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
-taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
-taskkill /F /IM "ETDService.exe" >> "%tmpfl%"
-taskkill /F /IM "gameinputsvc.exe" >> "%tmpfl%"
-taskkill /F /IM "gamingservicesnet.exe" >> "%tmpfl%"
-taskkill /F /IM "gamingservices.exe" >> "%tmpfl%"
-taskkill /F /IM "GoogleCrashHandler64.exe" >> "%tmpfl%"
-taskkill /F /IM "GoogleCrashHandler.exe" >> "%tmpfl%"
-taskkill /F /IM "HuaweiHiSuiteService64.exe" >> "%tmpfl%"
-taskkill /F /IM "igfxCUIService.exe" >> "%tmpfl%"
-taskkill /F /IM "igfxEM.exe" >> "%tmpfl%"
-taskkill /F /IM "ibtsiva.exe" >> "%tmpfl%"
-taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
-taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
-taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "SASrv.exe" >> "%tmpfl%"
-taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
-taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "CptService.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "backgroundTaskHost.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "msiexec.exe" >> "%tmpfl%"
-taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
-taskkill /F /IM "audiodg.exe" >> "%tmpfl%"
-taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
-taskkill /F /IM "KingoSoftService.exe" >> "%tmpfl%"
-taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
-taskkill /F /IM "NVIDIAWebHelper.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "UserOOBEBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
-taskkill /F /IM "MSI.TerminalServer.exe" >> "%tmpfl%"
-taskkill /F /IM "VoiceControl_Engine.exe" >> "%tmpfl%"
-taskkill /F /IM "DSATray.exe" >> "%tmpfl%"
-taskkill /F /IM "nvsphelper64.exe" >> "%tmpfl%"
-taskkill /F /IM "NVIDIAShare.exe" >> "%tmpfl%"
-taskkill /F /IM "SecurityHealthSystray.exe" >> "%tmpfl%"
-taskkill /F /IM "RtkAudUService64.exe" >> "%tmpfl%"
-taskkill /F /IM "Discord.exe" >> "%tmpfl%"
-taskkill /F /IM "PresentMon_x64.exe" >> "%tmpfl%"
-taskkill /F /IM "nvrla.exe" >> "%tmpfl%"
-taskkill /F /IM "iCUE.exe" >> "%tmpfl%"
-taskkill /F /IM "iCUEDevicePluginHost.exe" >> "%tmpfl%"
-taskkill /F /IM "QmlRenderer.exe" >> "%tmpfl%"
-taskkill /F /IM "IDMan.exe" >> "%tmpfl%"
-taskkill /F /IM "CCXProcess.exe" >> "%tmpfl%"
-taskkill /F /IM "node.exe" >> "%tmpfl%"
-taskkill /F /IM "AdobeIPCBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "wallpaper32.exe" >> "%tmpfl%"
-taskkill /F /IM "EarTrumpet.exe" >> "%tmpfl%"
-taskkill /F /IM "TranslucentTB.exe" >> "%tmpfl%"
-taskkill /F /IM "LocationNotificationWindows.exe" >> "%tmpfl%"
-taskkill /F /IM "WidgetService.exe" >> "%tmpfl%"
-taskkill /F /IM "ApplicationFrameHost.exe" >> "%tmpfl%"
-taskkill /F /IM "GameBar.exe" >> "%tmpfl%"
-taskkill /F /IM "XboxGameBarWidgets.exe" >> "%tmpfl%"
-taskkill /F /IM "Video.UI.exe" >> "%tmpfl%"
-taskkill /F /IM "GameBarFTServer.exe" >> "%tmpfl%"
-taskkill /F /IM "XboxPcAppFT.exe" >> "%tmpfl%"
-taskkill /F /IM "Telegram.Stub.exe" >> "%tmpfl%"
-taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
-taskkill /F /IM "CHXSmartScreen.exe" >> "%tmpfl%"
-taskkill /F /IM "nvcontainer.exe" >> "%tmpfl%"
-taskkill /F /IM "Telegram.exe" >> "%tmpfl%"
-taskkill /F /IM "SearchHost.exe" >> "%tmpfl%"
-taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "ShellExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "Notepad.exe" >> "%tmpfl%"
-taskkill /F /IM "atieclxx.exe" >> "%tmpfl%"
-taskkill /F /IM "atiesrxx.exe" >> "%tmpfl%"
-taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
-taskkill /F /IM "BtwRSupportService.exe" >> "%tmpfl%"
-taskkill /F /IM "SynTPEnhService.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
-taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
-taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
-taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
-taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
-taskkill /F /IM "notepad.exe" >> "%tmpfl%"
-taskkill /F /IM "printfilterpipelinesvc.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
-taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
-taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
-taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
-taskkill /F /IM "Runtime Broker.exe" >> "%tmpfl%"
-taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
-taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "SynTPHelper.exe" >> "%tmpfl%"
-taskkill /F /IM "SynTPEnh.exe" >> "%tmpfl%"
-taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
-taskkill /F /IM "Taskmgr.exe" >> "%tmpfl%"
-taskkill /F /IM "MsMpEng.exe" >> "%tmpfl%"
-taskkill /F /IM "NisSrv.exe" >> "%tmpfl%"
-taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
-taskkill /F /IM "SgrmBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
-taskkill /F /IM "SecurityHealthService.exe" >> "%tmpfl%"
-taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
-taskkill /F /IM "WMIADAP.exe" >> "%tmpfl%"
-
-echo Terminating non-system processes (excluding essential services)...
-
-for /F "tokens=2" %%i in ('TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running" ^| findstr /v "Image Name"') do (
-    set "process=%%i"
-    taskkill /F /IM !process!
-)
-
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-    goto MENU
-
-
-::  | FINDSTR /I /V /C:"winlogon.exe" | FINDSTR /I /V /C:"csrss.exe" | FINDSTR /I /V /C:"smss.exe" 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option2
-@echo off
-CD /D "%~DP0"
-
-cls
-color d
-SET tmpfl=TaskList_Lite.txt
-IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
-SET important_processes=conhost.exe lsm.exe winmgmt.exe explorer.exe winlogon.exe lsass.exe services.exe wininit.exe csrss.exe smss.exe System.exe
-SETLOCAL ENABLEDELAYEDEXPANSION
-FOR /F "DELIMS=: TOKENS=2" %%A IN ('TASKLIST /FI "USERNAME EQ %Username%" /FO LIST ^| FIND /I "Image name:"') DO (
-    SET var=%%~A
-    SET var=!var: =!
-    ECHO !var! | FINDSTR /I /V /C:"System" /C:"Idle" /C:"explorer.exe" /C:"wininit.exe" /C:"services.exe" /C:"lsass.exe" /C:"winlogon.exe" /C:"winmgmt.exe" /C:"csrss.exe" /C:"smss.exe" /C:"lsm.exe" /C:"conhost.exe" /C:"sihost.exe">>"%tmpfl%"
-)
-FOR /F "USEBACKQ TOKENS=*" %%A IN ("%tmpfl%") DO (
-    TASKKILL /F /FI "USERNAME eq %Username%" /IM %%~A
-)
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option3
-@echo off
-CD /D "%~DP0"
-
-color f
-cls
-SET tmpfl=TaskList_HandMade.txt
-IF EXIST "%tmpfl%" DEL /F /Q "%tmpfl%"
-taskkill /F /IM "CxAudMsg64.exe" >> "%tmpfl%"
-taskkill /F /IM "msedge.exe" >> "%tmpfl%"
-taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
-taskkill /F /IM "dasHost.exe" >> "%tmpfl%"
-taskkill /F /IM "ETDService.exe" >> "%tmpfl%"
-taskkill /F /IM "gameinputsvc.exe" >> "%tmpfl%"
-taskkill /F /IM "gamingservicesnet.exe" >> "%tmpfl%"
-taskkill /F /IM "gamingservices.exe" >> "%tmpfl%"
-taskkill /F /IM "GoogleCrashHandler64.exe" >> "%tmpfl%"
-taskkill /F /IM "GoogleCrashHandler.exe" >> "%tmpfl%"
-taskkill /F /IM "HuaweiHiSuiteService64.exe" >> "%tmpfl%"
-taskkill /F /IM "igfxCUIService.exe" >> "%tmpfl%"
-taskkill /F /IM "igfxEM.exe" >> "%tmpfl%"
-taskkill /F /IM "ibtsiva.exe" >> "%tmpfl%"
-taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
-taskkill /F /IM "SearchIndexer.exe" >> "%tmpfl%"
-taskkill /F /IM "MicrosoftWindows.Client.CBS_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "Microsoft.Windows.Search_cw5n1h2txyewy" >> "%tmpfl%"
-taskkill /F /IM "SASrv.exe" >> "%tmpfl%"
-taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
-taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "CptService.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "backgroundTaskHost.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "msiexec.exe" >> "%tmpfl%"
-taskkill /F /IM "WmiPrvSE.exe" >> "%tmpfl%"
-taskkill /F /IM "audiodg.exe" >> "%tmpfl%"
-taskkill /F /IM "spoolsv.exe" >> "%tmpfl%"
-taskkill /F /IM "KingoSoftService.exe" >> "%tmpfl%"
-taskkill /F /IM "OfficeClickToRun.exe" >> "%tmpfl%"
-taskkill /F /IM "NVIDIAWebHelper.exe" >> "%tmpfl%"
-taskkill /F /IM "RuntimeBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "dllhost.exe" >> "%tmpfl%"
-taskkill /F /IM "UserOOBEBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "ctfmon.exe" >> "%tmpfl%"
-taskkill /F /IM "MSI.TerminalServer.exe" >> "%tmpfl%"
-taskkill /F /IM "VoiceControl_Engine.exe" >> "%tmpfl%"
-taskkill /F /IM "DSATray.exe" >> "%tmpfl%"
-taskkill /F /IM "nvsphelper64.exe" >> "%tmpfl%"
-taskkill /F /IM "NVIDIAShare.exe" >> "%tmpfl%"
-taskkill /F /IM "SecurityHealthSystray.exe" >> "%tmpfl%"
-taskkill /F /IM "RtkAudUService64.exe" >> "%tmpfl%"
-taskkill /F /IM "Discord.exe" >> "%tmpfl%"
-taskkill /F /IM "PresentMon_x64.exe" >> "%tmpfl%"
-taskkill /F /IM "nvrla.exe" >> "%tmpfl%"
-taskkill /F /IM "iCUE.exe" >> "%tmpfl%"
-taskkill /F /IM "iCUEDevicePluginHost.exe" >> "%tmpfl%"
-taskkill /F /IM "QmlRenderer.exe" >> "%tmpfl%"
-taskkill /F /IM "IDMan.exe" >> "%tmpfl%"
-taskkill /F /IM "CCXProcess.exe" >> "%tmpfl%"
-taskkill /F /IM "node.exe" >> "%tmpfl%"
-taskkill /F /IM "AdobeIPCBroker.exe" >> "%tmpfl%"
-taskkill /F /IM "wallpaper32.exe" >> "%tmpfl%"
-taskkill /F /IM "EarTrumpet.exe" >> "%tmpfl%"
-taskkill /F /IM "TranslucentTB.exe" >> "%tmpfl%"
-taskkill /F /IM "LocationNotificationWindows.exe" >> "%tmpfl%"
-taskkill /F /IM "WidgetService.exe" >> "%tmpfl%"
-taskkill /F /IM "ApplicationFrameHost.exe" >> "%tmpfl%"
-taskkill /F /IM "Taskmgr.exe" >> "%tmpfl%"
-taskkill /F /IM "GameBar.exe" >> "%tmpfl%"
-taskkill /F /IM "XboxGameBarWidgets.exe" >> "%tmpfl%"
-taskkill /F /IM "Video.UI.exe" >> "%tmpfl%"
-taskkill /F /IM "GameBarFTServer.exe" >> "%tmpfl%"
-taskkill /F /IM "XboxPcAppFT.exe" >> "%tmpfl%"
-taskkill /F /IM "Telegram.Stub.exe" >> "%tmpfl%"
-taskkill /F /IM "smartscreen.exe" >> "%tmpfl%"
-taskkill /F /IM "CHXSmartScreen.exe" >> "%tmpfl%"
-taskkill /F /IM "nvcontainer.exe" >> "%tmpfl%"
-taskkill /F /IM "Telegram.exe" >> "%tmpfl%"
-taskkill /F /IM "SearchHost.exe" >> "%tmpfl%"
-taskkill /F /IM "StartMenuExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "ShellExperienceHost.exe" >> "%tmpfl%"
-taskkill /F /IM "Notepad.exe" >> "%tmpfl%"
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option6
-color e
-@echo off
-title Activate Windows 11 BY MEZO (+966 54 206 0259) (ALL versions) for FREE&cls&echo =====================================================================================&echo #Project: Activating Microsoft software products for FREE without additional software&echo =====================================================================================&echo.&echo #Supported products:&echo - Windows 11 Home&echo - Windows 11 Professional&echo - Windows 11 Education&echo - Windows 11 Enterprise&echo.&echo.&echo ============================================================================&echo Activating your Windows...&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /cpky >nul&set i=1&wmic os | findstr /I "enterprise" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43 >nul||cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 >nul||cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B >nul||cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV >nul||cscript //nologo slmgr.vbs /ipk WNMTR-4C88C-JK8YV-HQ7T2-76DF9 >nul||cscript //nologo slmgr.vbs /ipk 2F77B-TNFGY-69QQF-B8YKP-D69TJ >nul||cscript //nologo slmgr.vbs /ipk DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ >nul||cscript //nologo slmgr.vbs /ipk QFFDN-GRT3P-VKWWX-X7T3R-8B639 >nul||cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D >nul||cscript //nologo slmgr.vbs /ipk 92NFX-8DJQP-P6BBQ-THF9C-7CG2H >nul&goto skms) else wmic os | findstr /I "home" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 >nul||cscript //nologo slmgr.vbs /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM >nul||cscript //nologo slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH >nul||cscript //nologo slmgr.vbs /ipk PVMJN-6DFY6-9CCP6-7BKTT-D3WVR >nul&goto skms) else wmic os | findstr /I "education" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 >nul||cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ >nul&goto skms) else wmic os | findstr /I "11 pro" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX >nul||cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9 >nul||cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J >nul||cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF >nul||cscript //nologo slmgr.vbs /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y >nul||cscript //nologo slmgr.vbs /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC >nul&goto skms) else (goto notsupported)
-:skms
-if %i% GTR 10 goto busy
-if %i% EQU 1 set KMS=kms7.MSGuides.com
-if %i% EQU 2 set KMS=kms8.MSGuides.com
-if %i% EQU 3 set KMS=kms9.MSGuides.com
-if %i% GTR 3 goto ato
-cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
-:ato
-echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #Please consider supporting this project: donate.msguides.com&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 exit) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
-explorer "https://t.me/id9p0"&goto halt
-:notsupported
-echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
-:busy
-echo ============================================================================&echo.&echo MEZO SAYS: Sorry, the server is busy and can't respond to your request. Please try again.&echo.
-:halt
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option7
-
-@echo off
-
-color 3
-cls
-
-:: Check if the script is running with administrative privileges
-NET FILE 1>NUL 2>NUL
-if %errorlevel% == 0 (
-    goto :runPowerShell
-) else (
-    echo Please run this script as an administrator.
-    pause
-cls
-    goto menu
-)
-
-:runPowerShell
-:: Run the PowerShell command
-PowerShell.exe -NoProfile -ExecutionPolicy Bypass -Command "& {iwr -useb https://christitus.com/win | iex}"
-
-:: Check the exit code of PowerShell
-if %errorlevel% neq 0 (
-    echo An error occurred while running PowerShell command.
-    pause
-    goto MENU
-)
-
-echo PowerShell command executed successfully.
-
-:: Open CMD to the same directory
-start cmd /k "cd /d "%~dp0" && call mezo.bat"
-
-exit 
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:HELP
-
-explorer "https://t.me/id9p0"
-timeout /nobreak /t 0 >nul
-echo Done...
-
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option11
-
-cls
-
-color 70
-
-SFC /SCANNOW
-echo Scanning...
-
-Dism /Online /Cleanup-Image /RestoreHealth
-echo Restoring IMG
-
-timeout /nobreak /t 3 >nul
-echo Done...
-
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:Option12
-
-NetSh Advfirewall set allprofiles state on
-echo Done...
-pause
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+else echo Option not found! Returning to App Installer Menu.
+    goto AppInstallerMenu
 
 
 
@@ -960,7 +881,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option112
 explorer https://ninite.com/.net5/ninite.exe
@@ -968,7 +889,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option113
 explorer https://ninite.com/.net6/ninite.exe
@@ -976,7 +897,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option114
 explorer https://ninite.com/.net7/ninite.exe
@@ -984,7 +905,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option115
 explorer https://ninite.com/.net8/ninite.exe
@@ -992,7 +913,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option116
 explorer https://ninite.com/.netx5/ninite.exe
@@ -1000,7 +921,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option117
 explorer https://ninite.com/.netx6/ninite.exe
@@ -1008,7 +929,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option118
 explorer https://ninite.com/.netx7/ninite.exe
@@ -1016,7 +937,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option119
 explorer https://ninite.com/.netx8/ninite.exe
@@ -1024,7 +945,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1110
 explorer https://ninite.com/7zip/ninite.exe
@@ -1032,7 +953,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1111
 explorer https://ninite.com/adoptjava8/ninite.exe
@@ -1040,7 +961,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1112
 explorer https://ninite.com/adoptjavax11/ninite.exe
@@ -1048,7 +969,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1113
 explorer https://ninite.com/adoptjavax17/ninite.exe
@@ -1056,7 +977,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1114
 explorer https://ninite.com/adoptjavax21/ninite.exe
@@ -1064,7 +985,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1115
 explorer https://ninite.com/adoptjavax8/ninite.exe
@@ -1072,7 +993,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1116
 explorer https://ninite.com/adoptjdk8/ninite.exe
@@ -1080,7 +1001,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1117
 explorer https://ninite.com/adoptjdkx11/ninite.exe
@@ -1088,7 +1009,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1118
 explorer https://ninite.com/adoptjdkx17/ninite.exe
@@ -1096,7 +1017,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1119
 explorer https://ninite.com/adoptjdkx21/ninite.exe
@@ -1104,7 +1025,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1120
 explorer https://ninite.com/adoptjdkx8/ninite.exe
@@ -1112,7 +1033,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1121
 explorer https://ninite.com/aimp/ninite.exe
@@ -1120,7 +1041,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1122
 explorer https://ninite.com/audacity/ninite.exe
@@ -1128,7 +1049,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1123
 explorer https://ninite.com/avast/ninite.exe
@@ -1136,7 +1057,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1124
 explorer https://ninite.com/avg/ninite.exe
@@ -1144,7 +1065,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1125
 explorer https://ninite.com/avira/ninite.exe
@@ -1152,7 +1073,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1126
 explorer https://ninite.com/blender/ninite.exe
@@ -1160,7 +1081,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1127
 explorer https://ninite.com/cccp/ninite.exe
@@ -1168,7 +1089,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1128
 explorer https://ninite.com/ccleaner/ninite.exe
@@ -1176,7 +1097,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1129
 explorer https://ninite.com/cdburnerxp/ninite.exe
@@ -1184,7 +1105,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1130
 explorer https://ninite.com/chrome/ninite.exe
@@ -1192,7 +1113,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1131
 explorer https://ninite.com/correttojdk8/ninite.exe
@@ -1200,7 +1121,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1132
 explorer https://ninite.com/correttojdkx11/ninite.exe
@@ -1208,7 +1129,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1133
 explorer https://ninite.com/correttojdkx17/ninite.exe
@@ -1216,7 +1137,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1134
 explorer https://ninite.com/correttojdkx21/ninite.exe
@@ -1224,7 +1145,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1135
 explorer https://ninite.com/correttojdkx8/ninite.exe
@@ -1232,7 +1153,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1136
 explorer https://ninite.com/cutepdf/ninite.exe
@@ -1240,7 +1161,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1137
 explorer https://ninite.com/discord/ninite.exe
@@ -1248,7 +1169,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1138
 explorer https://ninite.com/dropbox/ninite.exe
@@ -1256,7 +1177,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1139
 explorer https://ninite.com/eclipse/ninite.exe
@@ -1264,7 +1185,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1140
 explorer https://ninite.com/edge/ninite.exe
@@ -1272,7 +1193,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1141
 explorer https://ninite.com/essentials/ninite.exe
@@ -1280,7 +1201,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1142
 explorer https://ninite.com/evernote/ninite.exe
@@ -1288,7 +1209,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1143
 explorer https://ninite.com/everything/ninite.exe
@@ -1296,7 +1217,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1144
 explorer https://ninite.com/faststone/ninite.exe
@@ -1304,7 +1225,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1145
 explorer https://ninite.com/filezilla/ninite.exe
@@ -1312,7 +1233,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1146
 explorer https://ninite.com/firefox/ninite.exe
@@ -1320,7 +1241,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1147
 explorer https://ninite.com/foobar/ninite.exe
@@ -1328,7 +1249,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1148
 explorer https://ninite.com/foxit/ninite.exe
@@ -1336,7 +1257,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1149
 explorer https://ninite.com/gimp/ninite.exe
@@ -1344,7 +1265,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1150
 explorer https://ninite.com/glary/ninite.exe
@@ -1352,7 +1273,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1151
 explorer https://ninite.com/gom/ninite.exe
@@ -1360,7 +1281,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1152
 explorer https://ninite.com/googledrivefordesktop/ninite.exe
@@ -1368,7 +1289,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1153
 explorer https://ninite.com/googleearth/ninite.exe
@@ -1376,7 +1297,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1154
 explorer https://ninite.com/greenshot/ninite.exe
@@ -1384,7 +1305,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1155
 explorer https://ninite.com/handbrake/ninite.exe
@@ -1392,7 +1313,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1156
 explorer https://ninite.com/imgburn/ninite.exe
@@ -1400,7 +1321,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1157
 explorer https://ninite.com/infrarecorder/ninite.exe
@@ -1408,7 +1329,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1158
 explorer https://ninite.com/inkscape/ninite.exe
@@ -1416,7 +1337,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1159
 explorer https://ninite.com/irfanview/ninite.exe
@@ -1424,7 +1345,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1160
 explorer https://ninite.com/itunes/ninite.exe
@@ -1432,7 +1353,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1161
 explorer https://ninite.com/keepass2/ninite.exe
@@ -1440,7 +1361,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1162
 explorer https://ninite.com/klitecodecs/ninite.exe
@@ -1448,7 +1369,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1163
 explorer https://ninite.com/krita/ninite.exe
@@ -1456,7 +1377,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1164
 explorer https://ninite.com/launchy/ninite.exe
@@ -1464,7 +1385,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1165
 explorer https://ninite.com/libreoffice/ninite.exe
@@ -1472,7 +1393,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1166
 explorer https://ninite.com/malwarebytes/ninite.exe
@@ -1480,7 +1401,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1167
 explorer https://ninite.com/mediamonkey/ninite.exe
@@ -1488,7 +1409,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1168
 explorer https://ninite.com/musicbee/ninite.exe
@@ -1496,7 +1417,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1169
 explorer https://ninite.com/notepadplusplus/ninite.exe
@@ -1504,7 +1425,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1170
 explorer https://ninite.com/nvda/ninite.exe
@@ -1512,7 +1433,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1171
 explorer https://ninite.com/onedrive/ninite.exe
@@ -1520,7 +1441,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1172
 explorer https://ninite.com/openoffice/ninite.exe
@@ -1528,7 +1449,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1173
 explorer https://ninite.com/openshell/ninite.exe
@@ -1536,7 +1457,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1174
 explorer https://ninite.com/operaChromium/ninite.exe
@@ -1544,7 +1465,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1175
 explorer https://ninite.com/paint.net/ninite.exe
@@ -1552,7 +1473,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1176
 explorer https://ninite.com/peazip/ninite.exe
@@ -1560,7 +1481,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1177
 explorer https://ninite.com/pidgin/ninite.exe
@@ -1568,7 +1489,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1178
 explorer https://ninite.com/putty/ninite.exe
@@ -1576,7 +1497,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1179
 explorer https://ninite.com/python/ninite.exe
@@ -1584,7 +1505,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1180
 explorer https://ninite.com/python3/ninite.exe
@@ -1592,7 +1513,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1181
 explorer https://ninite.com/pythonx3/ninite.exe
@@ -1600,7 +1521,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1182
 explorer https://ninite.com/qbittorrent/ninite.exe
@@ -1608,7 +1529,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1183
 explorer https://ninite.com/realvncserver/ninite.exe
@@ -1616,7 +1537,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1184
 explorer https://ninite.com/realvncviewer/ninite.exe
@@ -1624,7 +1545,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1185
 explorer https://ninite.com/revo/ninite.exe
@@ -1632,7 +1553,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1186
 explorer https://ninite.com/sharex/ninite.exe
@@ -1640,7 +1561,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1187
 explorer https://ninite.com/skype/ninite.exe
@@ -1648,7 +1569,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1188
 explorer https://ninite.com/spotify/ninite.exe
@@ -1656,7 +1577,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1189
 explorer https://ninite.com/spybot2/ninite.exe
@@ -1664,7 +1585,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1190
 explorer https://ninite.com/steam/ninite.exe
@@ -1672,7 +1593,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1191
 explorer https://ninite.com/sugarsync/ninite.exe
@@ -1680,7 +1601,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1192
 explorer https://ninite.com/sumatrapdf/ninite.exe
@@ -1688,7 +1609,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1193
 explorer https://ninite.com/super/ninite.exe
@@ -1696,7 +1617,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1194
 explorer https://ninite.com/teamviewer15/ninite.exe
@@ -1704,7 +1625,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1195
 explorer https://ninite.com/teracopy/ninite.exe
@@ -1712,7 +1633,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1196
 explorer https://ninite.com/thunderbird/ninite.exe
@@ -1720,7 +1641,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1197
 explorer https://ninite.com/trillian/ninite.exe
@@ -1728,7 +1649,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1198
 explorer https://ninite.com/vlc/ninite.exe
@@ -1736,7 +1657,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option1199
 explorer https://ninite.com/vscode/ninite.exe
@@ -1744,7 +1665,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11100
 explorer https://ninite.com/winamp/ninite.exe
@@ -1752,7 +1673,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11101
 explorer https://ninite.com/windirstat/ninite.exe
@@ -1760,7 +1681,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11102
 explorer https://ninite.com/winmerge/ninite.exe
@@ -1768,7 +1689,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11103
 explorer https://ninite.com/winrar/ninite.exe
@@ -1776,7 +1697,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11104
 explorer https://ninite.com/winscp/ninite.exe
@@ -1784,7 +1705,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11105
 explorer https://ninite.com/wiztree/ninite.exe
@@ -1792,7 +1713,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11106
 explorer https://ninite.com/xnview/ninite.exe
@@ -1800,7 +1721,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
+goto AppInstallerMenu
 
 :Option11107
 explorer https://ninite.com/zoom/ninite.exe
@@ -1808,118 +1729,7 @@ timeout /nobreak /t 0 >nul
 echo Done...
 cls
 color b
-goto MENU3
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:soon
-color a
-cls
-echo.
-echo.
-echo.
-echo.
-echo.         
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
-echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
-echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
-echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
-echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-timeout /nobreak /t 4 >nul
-
-goto menu2
-
-
-
-
-
-
-
-
-:soon1
-color a
-cls
-echo.
-echo.
-echo.
-echo.
-echo.         
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
-echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
-echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
-echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
-echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
-echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-timeout /nobreak /t 4 >nul
-
-goto menu4
-
-
-
-
-
-
-
-
-
-
-
-
-:Option14
-
-explorer https://www.microsoft.com/en-us/software-download/windows11
-timeout /nobreak /t 0 >nul
-echo Done...
-cls
-color b
-goto MENU2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+goto AppInstallerMenu
 
 
 
@@ -2067,15 +1877,7 @@ if defined link (
 
 
 
-
-
-
-
-
-
-
-
-:Option16
+:OfficeDownload
 explorer https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/ar-SA/ProPlus2021Retail.img
 timeout /nobreak /t 0 >nul
 echo Done...
@@ -2083,6 +1885,9 @@ cls
 color b
 goto MENU2
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::(End Of Codes):::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
@@ -2091,167 +1896,71 @@ goto MENU2
 
 
 
-:win107
-cls
-color b
-echo.
-echo.
-echo 1. Activate Windows 7
-echo.
-echo 2. Activate Windows 10
-echo.
-echo.
-echo.
-echo.
-choice /n /c 12 /m "Enter the number of your choice:"
-
-
-if errorlevel 2 goto windows10a
-if errorlevel 1 goto windows7a
+:MENU3
 
 
 
-
-:windows7a
 @echo off
-color a
-title Activate Windows 7 BY MEZO (+966 54 206 0259) (ALL versions) for FREE!
-cls
-echo #Project: Activating Microsoft software products for FREE without software
-echo #Supported products:
-echo - Windows 7 Professional
-echo - Windows 7 Professional N
-echo - Windows 7 Professional E
-echo - Windows 7 Enterprise
-echo - Windows 7 Enterprise N
-echo - Windows 7 Enterprise E
-echo =======================================================================
-echo MEZO is Activating your Windows...
-cd /d %windir%\system32
-cscript //nologo slmgr.vbs /upk >nul
-cscript //nologo slmgr.vbs /cpky >nul
-wmic os | findstr /I "enterprise" >nul
-if %errorlevel% EQU 0 (
-    cscript //nologo slmgr.vbs /ipk 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH >nul
-    cscript //nologo slmgr.vbs /ipk YDRBP-3D83W-TY26F-D46B2-XCKRJ >nul
-    cscript //nologo slmgr.vbs /ipk C29WB-22CC8-VJ326-GHFJW-H9DH4 >nul
-) else (
-    cscript //nologo slmgr.vbs /ipk FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 >nul
-    cscript //nologo slmgr.vbs /ipk MRPKT-YTG23-K7D7T-X2JMM-QY7MG >nul
-    cscript //nologo slmgr.vbs /ipk W82YF-2Q76Y-63HXB-FGJG9-GF7QX >nul
-)
-set i=1
-:server
-if %i%==1 set KMS_Sev=kms7.MSGuides.com
-if %i%==2 set KMS_Sev=kms8.MSGuides.com
-if %i%==3 set KMS_Sev=kms9.MSGuides.com
-if %i%==4 goto unsupported
-cscript //nologo slmgr.vbs /skms %KMS_Sev%:1688 >nul
-echo =======================================================================
+    
+title Comination Made By MEZO
+
+cls 
+
+color 7
+
+:: Display custom messages with color using ANSI escape codes
 echo.
-echo. cscript //nologo slmgr.vbs /ato | find /i "successfully" && (
-echo. =======================================================================
-echo. #My official number: +966542060259
-echo. #How it works: It Just Does
-echo. #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.
-echo. #Your support is helping me keep my servers running everyday!
-echo. =======================================================================
-choice /n /c YN /m "Would you like to Contact me on telegram [Y,N]?"
-if errorlevel 2 exit
-) || (
-echo The connection to my KMS server failed! Trying to connect to another one...
-echo Please wait...
+echo.           
+echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
+echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
+echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
+echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
+echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
+echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
 echo.
 echo.
-set /a i+=1
-goto server
-)
-explorer "https://t.me/id9p0"
-goto halt
-:unsupported
-echo =======================================================================
-echo. Sorry! Your version is not supported.
-:halt
-pause
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-goto MENU
+echo.
+echo.
+color 7
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo              #                                                                                             # 
+echo              #    1. Set Unwanted Services To Manual       2. Remove Temporary Files                       #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    3. Disable Xbox Services                 4. Tweak Curren Version (Not Recommended)       #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    5. WiFi Fixer                            6. Disable Wifi                                 #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    7. Back                                  8. More Options                                 #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    9. Call For Help                                                                         #
+echo              #                                                                                             #
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.
+echo.
+echo.
 
 
+choice /n /c 123456789 /m "Enter the number of your choice:"
+
+rem Check the user's choice and perform the corresponding action
+if errorlevel 9 goto HELP
+if errorlevel 8 goto menu5
+if errorlevel 7 goto menu2
+if errorlevel 6 goto DisableWifi
+if errorlevel 5 goto WifiFixer
+if errorlevel 4 goto TweakCurrentVersion
+if errorlevel 3 goto DisableXboxServices
+if errorlevel 2 goto DelTempFiles
+if errorlevel 1 goto ManualServices
 
 
-
-
-
-:windows10a
-@echo off
-color a
-title Activate Windows 10 BY MEZO (+966 54 206 0259) (ALL versions) for FREE&cls&echo =====================================================================================&echo #Project: Activating Microsoft software products for FREE without additional software&echo =====================================================================================&echo.&echo #Supported products:&echo - Windows 10 Home&echo - Windows 10 Professional&echo - Windows 10 Education&echo - Windows 10 Enterprise&echo.&echo.&echo ============================================================================&echo MEZO is Activating your Windows...&cscript //nologo slmgr.vbs /ckms >nul&cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /cpky >nul&set i=1&wmic os | findstr /I "enterprise" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43 >nul||cscript //nologo slmgr.vbs /ipk DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 >nul||cscript //nologo slmgr.vbs /ipk YYVX9-NTFWV-6MDM3-9PT4T-4M68B >nul||cscript //nologo slmgr.vbs /ipk 44RPN-FTY23-9VTTB-MP9BX-T84FV >nul||cscript //nologo slmgr.vbs /ipk WNMTR-4C88C-JK8YV-HQ7T2-76DF9 >nul||cscript //nologo slmgr.vbs /ipk 2F77B-TNFGY-69QQF-B8YKP-D69TJ >nul||cscript //nologo slmgr.vbs /ipk DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ >nul||cscript //nologo slmgr.vbs /ipk QFFDN-GRT3P-VKWWX-X7T3R-8B639 >nul||cscript //nologo slmgr.vbs /ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D >nul||cscript //nologo slmgr.vbs /ipk 92NFX-8DJQP-P6BBQ-THF9C-7CG2H >nul&goto skms) else wmic os | findstr /I "home" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk TX9XD-98N7V-6WMQ6-BX7FG-H8Q99 >nul||cscript //nologo slmgr.vbs /ipk 3KHY7-WNT83-DGQKR-F7HPR-844BM >nul||cscript //nologo slmgr.vbs /ipk 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH >nul||cscript //nologo slmgr.vbs /ipk PVMJN-6DFY6-9CCP6-7BKTT-D3WVR >nul&goto skms) else wmic os | findstr /I "education" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 >nul||cscript //nologo slmgr.vbs /ipk 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ >nul&goto skms) else wmic os | findstr /I "10 pro" >nul
-if %errorlevel% EQU 0 (cscript //nologo slmgr.vbs /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX >nul||cscript //nologo slmgr.vbs /ipk MH37W-N47XK-V7XM9-C7227-GCQG9 >nul||cscript //nologo slmgr.vbs /ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J >nul||cscript //nologo slmgr.vbs /ipk 9FNHH-K3HBT-3W4TD-6383H-6XYWF >nul||cscript //nologo slmgr.vbs /ipk 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y >nul||cscript //nologo slmgr.vbs /ipk YVWGF-BXNMC-HTQYQ-CPQ99-66QFC >nul&goto skms) else (goto notsupported)
-:skms
-if %i% GTR 10 goto busy
-if %i% EQU 1 set KMS=kms7.MSGuides.com
-if %i% EQU 2 set KMS=kms8.MSGuides.com
-if %i% EQU 3 set KMS=kms9.MSGuides.com
-if %i% GTR 3 goto ato
-cscript //nologo slmgr.vbs /skms %KMS%:1688 >nul
-:ato
-echo ============================================================================&echo.&echo.&cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official number: +966542060259&echo.&echo #How it works: it just does&echo.&echo #Please feel free to contact me at moazelsayed884@gmail.com if you have any questions or concerns.&echo.&echo #my servers running 24/7!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to Contact me on telegram? [Y,N]?" & if errorlevel 2 pause) || (echo MEZO SAYS: The connection to my KMS server failed! Trying to connect to another one... & echo MEZO SAYS: Please wait... & echo. & echo. & set /a i+=1 & goto skms)
-explorer "https://t.me/id9p0"&goto halt
-:notsupported
-echo ============================================================================&echo.&echo MEZO SAYS: Sorry, your version is not supported.&echo.&goto halt
-:busy
-echo ============================================================================&echo.&echo MEZO SAYS: Sorry, the server is busy and can't respond to your request. Please try again.&echo.
-:halt
-timeout /nobreak /t 3 >nul
-echo Done...
-cls
-color b
-    goto MENU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::(Codes)::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :ManualServices
 @echo off
@@ -2549,7 +2258,7 @@ echo Done...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
@@ -2599,7 +2308,7 @@ echo Done...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
@@ -2644,7 +2353,7 @@ echo Disabling Xbox services...
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
@@ -5175,7 +4884,7 @@ echo These Changes Will Occur After Next Reboot.
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
@@ -5218,7 +4927,7 @@ if "%option%"=="1" (
 ) else if "%option%"=="4" (
     call :additional_service_fixer
 ) else if "%option%"=="5" (
-    call :MENU4
+    call :MENU3
 ) else if "%option%"=="6" (
     exit
 ) else (
@@ -5397,7 +5106,7 @@ if /i "%confirm%"=="Y" (
     timeout /nobreak /t 3 >nul
     cls
     color b
-    goto MENU4
+    goto MENU3
 ) else (
     echo Invalid input. Please enter Y or N.
     timeout /nobreak /t 3 >nul
@@ -5412,7 +5121,7 @@ shutdown /r /t 0
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
@@ -5426,17 +5135,114 @@ echo WiFi disabled. Please reboot.
 timeout /nobreak /t 3 >nul
 cls
 color b
-    goto MENU4
+    goto MENU3
 
 
 
 
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::(End Of Codes):::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+
+:MENU5
+
+@echo off
+    
+title Comination Made By MEZO
+
+cls 
+
+color d
+
+:: Display custom messages with color using ANSI escape codes
+echo.
+echo.           
+echo                                         [33m███╗   ███╗███████╗███████╗ ██████╗[0m 
+echo                                         [33m████╗ ████║██╔════╝╚══███╔╝██╔═══██╗[0m
+echo                                         [33m██╔████╔██║█████╗    ███╔╝ ██║   ██║[0m
+echo                                         [33m██║╚██╔╝██║██╔══╝   ███╔╝  ██║   ██║[0m
+echo                                         [33m██║ ╚═╝ ██║███████╗███████╗╚██████╔╝[0m
+echo                                         [33m╚═╝     ╚═╝╚══════╝╚══════╝ ╚═════╝[0m
+echo.
+echo.
+echo.
+echo.
+color d
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+echo              #                                                                                             # 
+echo              #    1. Turn Search Indexing Off              2. Turn Search Indexing On                      #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    3. Increase Power Efficiency             4.                                              #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    5.                                       6.                                              #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    7. Back                                  8. More Options                                 #
+echo              #                                                                                             #
+echo              #                                                                                             #
+echo              #    9. Call For Help                                                                         #
+echo              #                                                                                             #
+echo              # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.
+echo.
+echo.
+
+
+choice /n /c 123456789 /m "Enter the number of your choice:"
+
+rem Check the user's choice and perform the corresponding action
+if errorlevel 9 goto HELP
+if errorlevel 8 goto soon1
+if errorlevel 7 goto MENU3
+if errorlevel 6 goto soon1
+if errorlevel 5 goto soon1
+if errorlevel 4 goto soon1
+if errorlevel 3 goto IncreasePowerEfficiency
+if errorlevel 2 goto TurnSearchIndexingOn
+if errorlevel 1 goto TurnSearchIndexingOff
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::(Codes)::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :IncreasePowerEfficiency
 regedit /s "Increase Power Efficiency.reg"
-echo Power Efficiency Increased successfully...
+echo Power Efficiency Increased Successfully...
+timeout /nobreak /t 3 >nul
+cls
+color b
+    goto MENU5
+
+
+
+
+
+:TurnSearchIndexingOff
+cls
+echo --- Disable "Windows Search" feature
+dism /Online /Disable-Feature /FeatureName:"SearchEngine-Client-Package" /NoRestart
+:: ----------------------------------------------------------
+takeown /s %computername% /u %username% /f "%WINDIR%\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe"
+icacls "%WINDIR%\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe" /inheritance:r /grant:r %username%:F
+taskkill /im SearchHost.exe /f
+del "%WINDIR%\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe" /s /f /q
+sc config WSearch start= disabled
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Windows Search" /v "CortanaConsent" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /t REG_DWORD /d "1" /f
+reg add "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "DisableSearch" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsAADCloudSearchEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsMSACloudSearchEnabled" /t REG_DWORD /d "0" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "SafeSearchMode" /t REG_DWORD /d "0" /f
+echo Search Indexing Turned Off Successfully ...
 timeout /nobreak /t 3 >nul
 cls
 color b
@@ -5447,10 +5253,529 @@ color b
 
 
 
+:TurnSearchIndexingOn
+cls
+echo --- Enable "Windows Search" feature
+dism /Online /Enable-Feature /FeatureName:"SearchEngine-Client-Package" /NoRestart
+:: ----------------------------------------------------------
+icacls "%WINDIR%\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe" /inheritance:r /remove:g %username%
+sc config WSearch start= auto
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "SearchboxTaskbarMode" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Search" /v "BingSearchEnabled" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Windows Search" /v "CortanaConsent" /t REG_DWORD /d "1" /f
+reg delete "HKCU\Software\Policies\Microsoft\Windows\Explorer" /v "DisableSearchBoxSuggestions" /f
+reg delete "HKLM\Software\Policies\Microsoft\Windows\Windows Search" /v "DisableSearch" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsAADCloudSearchEnabled" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDeviceSearchHistoryEnabled" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsMSACloudSearchEnabled" /t REG_DWORD /d "1" /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "SafeSearchMode" /t REG_DWORD /d "1" /f
+echo Search Indexing Turned On Successfully ...
+timeout /nobreak /t 3 >nul
+cls
+color b
+    goto MENU5
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::(End Of Codes):::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:soon
+color a
+cls
+echo.
+echo.
+echo.
+echo.
+echo.         
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
+echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
+echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
+echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
+echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+timeout /nobreak /t 4 >nul
+
+goto menu2
+
+
+
+
+
+
+:soon1
+color a
+cls
+echo.
+echo.
+echo.
+echo.
+echo.         
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo .##....##.##.....##.###...###..##..###...##.##....##.....##....##.##.....##.##.....##.###...##
+echo .##.......##.....##.####.####..##..####..##.##...........##.......##.....##.##.....##.####..##
+echo .##.......##.....##.##.###.##..##..##.##.##.##...####.....######..##.....##.##.....##.##.##.##
+echo .##.......##.....##.##.....##..##..##..####.##....##...........##.##.....##.##.....##.##..####
+echo .##....##.##.....##.##.....##..##..##...###.##....##.....##....##.##.....##.##.....##.##...###
+echo ..######...#######..##.....##.####.##....##..######.......######...#######...#######..##....##
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+timeout /nobreak /t 4 >nul
+
+goto MENU3
+
+
+
+
+
+:HELP
+
+explorer "https://t.me/id9p0"
+timeout /nobreak /t 0 >nul
+echo Done...
+
+cls
+color b
+    goto MENU
 =-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-==-=-=-=
 
 
