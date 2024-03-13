@@ -3,7 +3,7 @@ cls
 :: Check if the script is running with administrative privileges
 NET FILE 1>NUL 2>NUL
 if %errorlevel% == 0 (
-    goto MENU
+    goto MENUOPTIONS
 ) else (
     title ERROR
     color 4
@@ -12,7 +12,35 @@ if %errorlevel% == 0 (
     exit
 )
 
-                                                                                
+:MENUOPTIONS
+chcp 65001 >nul
+cls
+color b
+echo.
+echo.
+echo.
+echo.
+echo                                 ======================= Quick Access ========================
+echo                                 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+echo                                 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.                                   
+echo                                 #            [1] Menu 1             [2] Menu 2              #
+echo.                                                                                          
+echo                                 #            [3] Menu 3             [4] Menu 4              #
+echo.                                
+echo                                 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+echo.
+echo.
+echo.
+echo.
+
+choice /n /c 1234 /m "Enter the number of your choice:"
+
+rem Check the user's choice and perform the corresponding action
+if errorlevel 4 goto MENU4
+if errorlevel 3 goto MENU3
+if errorlevel 2 goto MENU2
+if errorlevel 1 goto MENU                                                                               
 
 color b
 
