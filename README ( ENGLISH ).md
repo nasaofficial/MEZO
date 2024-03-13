@@ -82,3 +82,23 @@ Functions:
 8. Opens a new menu for additional options.
 
 9. Communicates with the developer directly.
+
+----------------- Fourth Menu -----------------
+
+1. Turn Search Indexing Off.
+
+2. Turn Search Indexing On.
+
+3. Increase Power Efficiency.
+
+4. Ram Optimizer.
+
+5. Soon.
+
+6. Soon.
+
+7. Goes back to previous menu.
+
+8. Opens a new menu for additional options.
+
+9. Communicates with the developer directly.
