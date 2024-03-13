@@ -122,3 +122,20 @@ cd mezo
 
 git pull origin
 ```
+
+
+# Screenshots:
+
+![image](https://github.com/nasaofficial/MEZO/assets/121038071/1fcfa73b-5aa4-470e-bdb5-9f3c746ead8b)
+
+
+![image](https://github.com/nasaofficial/MEZO/assets/121038071/bf4f441a-edbd-4448-8b13-5922c31858ad)
+
+
+![image](https://github.com/nasaofficial/MEZO/assets/121038071/bdb1b50d-e112-4891-ab99-3003d318f426)
+
+
+![image](https://github.com/nasaofficial/MEZO/assets/121038071/59ea2f4e-3649-4f4c-b422-c9f58213dc1f)
+
+
+![image](https://github.com/nasaofficial/MEZO/assets/121038071/093ec80a-eb1c-4678-8784-983209ce3d53)
